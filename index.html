@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>포트폴리오 · UI/UX · 퍼블리셔 · PL</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,300,0,0&display=block" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <!-- 이름 교체 -->
+    <div class="brand">조용현<small>UI 아키텍트 · 퍼블리셔 · PL</small></div>
+    <button class="burger" id="burger" aria-label="메뉴 열기">
+      <span class="ms" aria-hidden="true">menu</span>
+    </button>
+    <nav class="menu" id="menu">
+      <a href="#featured">대표 작업</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#solo">직접 만든 것</a>
+      <a href="#skills">기술</a>
+      <a href="#clients">함께한 기업</a>
+      <a href="#contact">연락처</a>
+      <!-- 이력서 파일 경로 교체 -->
+      <a href="resume.pdf" class="resume" download>이력서</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="wrap hero-in">
+    <!-- 사진 교체: 아래 .photo 를 <img>로 -->
+    <div class="photo">
+      <span class="ms" aria-hidden="true">person</span>
+      <span>여기에 내 사진</span>
+    </div>
+    <div class="hcopy">
+      <div class="eyebrow">조용현 · UI 아키텍트</div>
+      <h1>UI의 <span class="hl">틀을 세우고</span>,<br>배포까지 관통합니다</h1>
+      <p class="hsub">21개 기업 시스템이 딛고 선 UI 기반을 설계했습니다.<br>공공 · 에너지 · 금융 엔터프라이즈 26개 프로젝트, 그리고 혼자 배포한 서비스까지.</p>
+      <div class="pills">
+        <div class="pill"><b class="mono">7년+</b><span>경력</span></div>
+        <div class="pill"><b class="mono">26</b><span>프로젝트</span></div>
+        <div class="pill"><b class="mono">21</b><span>기업</span></div>
+        <div class="pill"><b class="mono">2+</b><span>솔로 빌드</span></div>
+      </div>
+      <div class="hcta">
+        <a href="#projects" class="btn btn-p">프로젝트 보기</a>
+        <a href="#contact" class="btn btn-o">연락하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== REASONS ===== -->
+<section class="reasons">
+  <div class="wrap">
+    <div class="rlabel rv">저를 뽑아야 하는 이유</div>
+    <div class="rgrid">
+      <div class="rc rv"><div class="ic"><span class="ms" aria-hidden="true">layers</span></div><b>전 공정을 혼자</b><p>설계 · 디자인 · 퍼블리싱을 끊김 없이 한 사람이 끝냅니다.</p></div>
+      <div class="rc rv"><div class="ic"><span class="ms" aria-hidden="true">groups</span></div><b>팀을 이끕니다</b><p>PL로 다수 프로젝트 리딩. 한수원 ERP 팀원 4명 리드.</p></div>
+      <div class="rc rv"><div class="ic"><span class="ms" aria-hidden="true">bolt</span></div><b>공정을 줄입니다</b><p>자동화 스크립트 활용으로 작업 기간 50% 이상 단축.</p></div>
+      <div class="rc rv"><div class="ic"><span class="ms" aria-hidden="true">domain</span></div><b>도메인이 있습니다</b><p>한전 · 한수원 · 한전KDN 등 에너지 · 공공 시스템 반복 수행.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FEATURED CASE STUDIES ===== -->
+<section class="featured" id="featured">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">FEATURED</div>
+      <h2>대표 작업</h2>
+      <p>7년을 관통하는 두 개의 축 — UI의 틀을 세우고, 그 틀을 자동화로 확장했습니다.</p>
+    </div>
+    <div class="cases">
+
+      <!-- Case 1: 데브팩 -->
+      <div class="case rv">
+        <span class="case-tag">UI 기반 설계 · 사내 솔루션</span>
+        <h3>데브팩 — 21개 기업 UI의 공통 조상</h3>
+        <p class="lede">이젠고 UI 개발 패키지의 앞단을 정립하다. 개별 프로젝트가 아니라, 다른 프로젝트들이 딛고 설 기반을 만든 작업입니다.</p>
+        <dl class="tb">
+          <dt>문제</dt><dd>매 프로젝트마다 UI를 처음부터 반복 제작 — 시간과 비용이 크고, 회사마다 화면 품질이 제각각이었습니다.</dd>
+          <dt>접근</dt><dd>대표가 구상한 UI 패키지 '데브팩'을 입사 직후 이어받아, 사내에 축적된 구축 사례에서 재사용 가능한 UI 패턴을 추출. 규칙 · 가이드 · 템플릿 · 디자인 등 UI 앞단을 사실상 전담해 표준 틀로 정립했습니다. <span style="color:var(--faint)">(엔진 · 백엔드는 개발자와 협업)</span></dd>
+          <dt>확장</dt><dd>UI 규칙 · 컴포넌트 · 템플릿 체계를 <b>디자인 가이드 문서(54p)로 표준화</b>했고, WCAG 2.1 AA · KRDS(공공 UI 표준)를 반영해 접근성 기준까지 정의했습니다. PC에서 모바일 · 테마로 적용 범위를 넓혔고, 현재는 자동화 툴로 진화 중입니다.</dd>
+          <dt>결과</dt><dd>기획 · 디자인 · 개발 · 운영 전 직군이 따르는 공통 기준이 됐고, 이 UI 기반이 한전 · 한수원 · 두산건설 등 다수 기업 시스템에 재사용되며 개발 생산성 향상과 유지보수 비용 절감으로 이어졌습니다.</dd>
+        </dl>
+        <div class="case-foot">
+          <span class="mtag win">UI 앞단 전담</span>
+          <span class="mtag">Nexacro</span>
+          <span class="mtag">UI 규칙 · 컴포넌트</span>
+          <span class="mtag">WCAG 2.1 AA · KRDS</span>
+          <span class="mtag">디자인 가이드 54p</span>
+        </div>
+      </div>
+
+      <!-- Case 2: UI컨버전 자동화 -->
+      <div class="case rv">
+        <span class="case-tag">자동화 · 현재 진행 중</span>
+        <h3>UI컨버전 자동화 솔루션</h3>
+        <p class="lede">데브팩으로 세운 UI 기반을, 이번엔 사람이 아니라 도구가 찍어내게. 만드는 것에서 만드는 방식을 만드는 것으로.</p>
+        <dl class="tb">
+          <dt>문제</dt><dd>넥사크로 UI 컨버전을 매 건 수작업으로 처리 — 반복이 많고 시간 · 비용이 컸습니다.</dd>
+          <dt>접근</dt><dd>데브팩 기반 위에 컨버전을 자동화하는 솔루션을 설계 · 리딩. 스크립트 자동화로 반복 공정을 걷어냈습니다.</dd>
+          <dt>확장</dt><dd>솔루션에서 그치지 않고, 제품을 알리는 홍보 · 웹사이트 개편 · 문서 · 전체 틀까지 직접 설계했습니다. UI를 만드는 것을 넘어, 그 UI 제품을 시장에 내보내는 일까지.</dd>
+          <dt>결과</dt><dd>작업 기간 50% 이상 단축. 설계 · PL로서 진행 중인 최신 프로젝트입니다.</dd>
+        </dl>
+        <div class="case-foot">
+          <span class="mtag win">공정 50%+ 단축</span>
+          <span class="mtag">설계 · PL</span>
+          <span class="mtag">스크립트 자동화</span>
+          <span class="mtag">홍보 · 웹 · 문서</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROJECTS (TIMELINE) ===== -->
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">PROJECTS</div>
+      <h2>7년, 26개 시스템</h2>
+      <p>퍼블리셔로 시작해 설계 · PL까지. 왼쪽 레일이 곧 성장 곡선입니다.</p>
+    </div>
+    <div class="tl">
+
+      <div class="yr rv"><span class="y mono">2026</span></div>
+      <div class="rail"><span class="dot lead"></span></div>
+      <div class="cards rv">
+        <div class="pc"><div class="pc-h"><span class="co">이젠고</span><span class="role lead">설계·PL</span></div><div class="pj">UI컨버전 자동화 솔루션 패키지</div><div class="meta">시스템 구축 · 26.03– · <span class="ing">진행 중</span></div></div>
+        <div class="pc"><div class="pc-h"><span class="co">두산건설</span><span class="role lead">PL</span></div><div class="pj">DOOIT 시스템</div><div class="meta">시스템 구축 · 25.11–26.04 · 6개월</div></div>
+      </div>
+
+      <div class="yr rv"><span class="y mono">2025</span><span class="era">설계 · PL</span></div>
+      <div class="rail"><span class="dot lead"></span></div>
+      <div class="cards rv">
+        <div class="pc"><div class="pc-h"><span class="co">한전KDN</span><span class="role lead">설계·PL</span></div><div class="pj">모바일 원전건설사업관리시스템 구축</div><div class="meta">시스템 구축 · 25.07–25.10 · 4개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">우리금융에프앤아이</span><span class="role lead">PL</span></div><div class="pj">전산시스템 구축 프로젝트</div><div class="meta">시스템 구축 · 25.04–25.07 · 4개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">atCenter</span><span class="role lead">PL</span></div><div class="pj">비축농산물 전자입찰 PC/Mobile</div><div class="meta">웹/모바일 구축 · 24.12–25.04 · 5개월</div></div>
+      </div>
+
+      <div class="yr rv"><span class="y mono">2024</span></div>
+      <div class="rail"><span class="dot lead"></span></div>
+      <div class="cards rv">
+        <div class="pc"><div class="pc-h"><span class="co">한국전력공사</span><span class="role">디자인</span></div><div class="pj">한국전력 EP Re-Design</div><div class="meta">리뉴얼 · 24.11–24.12 · 2개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">농산물품질관리원</span><span class="role">디자인·퍼블</span></div><div class="pj">Devpack, SDI 모바일 패키지</div><div class="meta">패키지 개발 · 24.09–24.10 · 2개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">금융감독원</span><span class="role lead">PL</span></div><div class="pj">금감원 경영정보</div><div class="meta">시스템 구축 · 24.09 · 1개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">이젠고</span><span class="role lead">PL</span></div><div class="pj">Devpack, SDI 모바일 패키지</div><div class="meta">패키지 개발 · 24.06–24.09 · 4개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">한전KDN</span><span class="role lead">PL</span></div><div class="pj">한수원 경영관리 ERP 고도화 · 팀원 4명 리딩</div><div class="meta">고도화 · 23.05–24.06 · 14개월</div></div>
+      </div>
+
+      <div class="yr rv"><span class="y mono">2023</span></div>
+      <div class="rail"><span class="dot lead"></span></div>
+      <div class="cards rv">
+        <div class="pc"><div class="pc-h"><span class="co">한수원</span><span class="role lead">PL</span></div><div class="pj">통합 원전건설관리 / 업무포털 표준화 · 팀원 4명 리딩</div><div class="meta">표준화 구축 · 23.10–23.12 · 3개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">건원건축</span><span class="role lead">PL</span></div><div class="pj">채용관리 시스템 모바일</div><div class="meta">모바일 구축 · 23.10–23.12 · 3개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">한샘개발</span><span class="role lead">PL</span></div><div class="pj">이마트24 차세대 경영주 모바일 시스템</div><div class="meta">모바일 구축 · 23.02–23.05 · 4개월</div></div>
+      </div>
+
+      <div class="yr rv"><span class="y mono">2022</span><span class="era">PL · 프로젝트 리딩</span></div>
+      <div class="rail"><span class="dot lead"></span></div>
+      <div class="cards rv">
+        <div class="pc"><div class="pc-h"><span class="co">한샘개발</span><span class="role lead">PL</span></div><div class="pj">이마트24 관리손익 시스템</div><div class="meta">시스템 구축 · 22.07 · 1개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">숭실사이버대</span><span class="role lead">PL</span></div><div class="pj">학사관리 시스템</div><div class="meta">시스템 구축 · 22.08–22.12 · 5개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">한양대학교</span><span class="role">디자인·퍼블</span></div><div class="pj">교내정보시스템 고도화 (넥사크로 전환)</div><div class="meta">고도화 · 22.02–22.07 · 6개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">건원건축</span><span class="role">디자인·퍼블</span></div><div class="pj">KIS Information System</div><div class="meta">시스템 구축 · 21.06–22.04 · 11개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">이젠고</span><span class="role">디자인·퍼블</span></div><div class="pj">DevPack 모바일 디자인</div><div class="meta">디자인/구축 · 21.02–22.02 · 13개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">새한신용정보</span><span class="role">디자인·퍼블</span></div><div class="pj">채권추심 포털 · 대규모 데이터 그리드 UI 설계</div><div class="meta">포털 구축 · 21.11–22.12 · 14개월</div></div>
+      </div>
+
+      <div class="yr rv"><span class="y mono">2021</span><span class="era">디자이너 · 퍼블리셔</span></div>
+      <div class="rail"><span class="dot"></span></div>
+      <div class="cards rv">
+        <div class="pc"><div class="pc-h"><span class="co">ICD</span><span class="role">디자인·퍼블</span></div><div class="pj">ICD(안성) 포털사이트</div><div class="meta">웹사이트 구축 · 21.10–21.12 · 3개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">세메스</span><span class="role">퍼블리싱</span></div><div class="pj">통합개발 운영 플랫폼 구축 · 삼성 계열</div><div class="meta">플랫폼 구축 · 21.03–21.11 · 9개월</div></div>
+      </div>
+
+      <div class="yr rv"><span class="y mono">2020</span></div>
+      <div class="rail"><span class="dot"></span></div>
+      <div class="cards rv">
+        <div class="pc"><div class="pc-h"><span class="co">파인씨앤아이</span><span class="role">퍼블리싱</span></div><div class="pj">한수원 발전운영 포털</div><div class="meta">포털 구축 · 20.08–20.10 · 3개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">교원그룹</span><span class="role">퍼블리싱</span></div><div class="pj">SAP 기반 업무포털 구축</div><div class="meta">포털 구축 · 20.04–20.10 · 7개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">중부도시가스</span><span class="role">퍼블리싱</span></div><div class="pj">차세대 웹 프로젝트 (Java)</div><div class="meta">차세대 구축 · 19.08–20.02 · 7개월</div></div>
+        <div class="pc"><div class="pc-h"><span class="co">한국철강</span><span class="role">퍼블리싱</span></div><div class="pj">입출고 관리 시스템</div><div class="meta">시스템 구축 · 19.11–20.01 · 3개월</div></div>
+      </div>
+
+      <div class="yr rv"><span class="y mono">2019</span><span class="era">퍼블리싱</span></div>
+      <div class="rail"><span class="dot"></span></div>
+      <div class="cards rv">
+        <div class="pc"><div class="pc-h"><span class="co">KTE</span><span class="role">퍼블리싱</span></div><div class="pj">통합포털 사이트</div><div class="meta">포털 구축 · 19.09–19.10 · 2개월</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== SOLO BUILDS ===== -->
+<section class="solo" id="solo">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">SIDE PROJECTS</div>
+      <h2>직접 만든 것</h2>
+      <p>기획부터 DB · 프론트 · 배포까지, 혼자 끝낸 결과물.</p>
+    </div>
+    <div class="solo-grid">
+      <div class="proj rv">
+        <div class="proj-h"><b>로그지지</b><span class="u">maplelog.gg</span></div>
+        <div class="tag">개인 프로젝트 · 기획부터 배포까지 단독</div>
+        <!-- 로그지지 한 줄 설명 교체 -->
+        <p class="d">메이플랜드 길드 운영 올인원 플랫폼. 확성기 로그 실시간 검색, 보스 타이머, 공대 모집, 레이드 정산·분배를 한 곳에서 처리합니다. Discord OAuth 로그인, 봇 DM 알림, 역할 기반 권한, 관리자 패널까지 — DB 설계부터 프론트엔드, 배포·운영을 혼자 구축한 실운영 서비스입니다.</p>
+        <div class="chips">
+          <a class="chip link" href="https://maplelog.gg" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>Live</a>
+          <!-- GitHub 주소 교체 -->
+          <a class="chip" href="https://github.com/yonghyeoncho-dev" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+          <span class="chip"><span class="ms" aria-hidden="true">dns</span>자체 배포</span>
+          <span class="chip stack">DB</span>
+          <span class="chip stack">Frontend</span>
+        </div>
+      </div>
+      <div class="proj rv">
+        <div class="proj-h"><b>이젠고 홈페이지 리뉴얼</b></div>
+        <div class="tag">재개편 · 단독</div>
+        <p class="d">기존 사이트를 크롤링해 HTML 구조를 재설계하고 리디자인. 배포와 Git 커밋 내역으로 작업 과정을 남겼습니다.</p>
+        <div class="chips">
+          <span class="chip"><span class="ms" aria-hidden="true">commit</span>Git 커밋 내역</span>
+          <span class="chip"><span class="ms" aria-hidden="true">dns</span>배포</span>
+          <span class="chip stack">HTML</span>
+          <span class="chip stack">리디자인</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GitHub 증거 블록: USERNAME 두 곳 교체. 잔디가 실할 때만 노출 권장 -->
+    <div class="gh rv">
+      <div class="gh-h"><b>GitHub 활동</b><a href="https://github.com/yonghyeoncho-dev" target="_blank" rel="noopener">github.com/yonghyeoncho-dev →</a></div>
+      <p>말이 아니라 기록으로. 위 결과물들의 커밋 내역입니다.</p>
+      <img src="https://ghchart.rshah.org/256EF4/yonghyeoncho-dev" alt="GitHub 최근 1년 커밋 히트맵" loading="lazy">
+      <div class="gh-stats">
+        <span class="gh-stat"><b class="mono">000+</b>커밋 (최근 1년)</span>
+        <span class="gh-stat"><b class="mono">0</b>공개 저장소</span>
+        <span class="gh-stat"><b class="mono">2</b>운영 중 배포</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS ===== -->
+<section class="skills" id="skills">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">SKILLS</div>
+      <h2>기술</h2>
+      <p>숙련도 바 대신, 실제 프로젝트에서 쓴 것과 쓸 수 있는 것으로 구분했습니다.</p>
+    </div>
+    <div class="sk-grid">
+      <div class="sk rv">
+        <div class="sk-h"><h3>엔터프라이즈 UI</h3><span class="lv">능숙 · 주력</span></div>
+        <div class="tags"><span class="tag">Nexacro</span><span class="tag">웹 퍼블리싱</span><span class="tag">HTML/CSS/JS</span><span class="tag">웹표준 · 웹접근성</span><span class="tag">반응형 웹</span><span class="tag">UI 표준화 · 화면설계</span></div>
+      </div>
+      <div class="sk rv">
+        <div class="sk-h"><h3>디자인</h3><span class="lv">능숙 · 주력</span></div>
+        <div class="tags"><span class="tag">UI/UX 디자인</span><span class="tag">Figma</span><span class="tag">디자인 시스템</span><span class="tag">컴포넌트 가이드</span><span class="tag">모바일 UI</span></div>
+      </div>
+      <div class="sk rv">
+        <div class="sk-h"><h3>리딩 · 설계</h3><span class="lv">능숙 · 검증됨</span></div>
+        <div class="tags"><span class="tag">PL (프로젝트 리드)</span><span class="tag">팀 리딩 (4인)</span><span class="tag">UI 아키텍처 설계</span><span class="tag">공정 자동화</span><span class="tag">SI · 공공/금융 도메인</span></div>
+      </div>
+      <div class="sk rv">
+        <div class="sk-h"><h3>풀스택 · 개인 개발</h3><span class="lv exp">사용 경험 · 실배포</span></div>
+        <div class="tags"><span class="tag">Frontend</span><span class="tag">DB 설계</span><span class="tag">배포 · 운영</span><span class="tag">Git / GitHub</span><span class="tag">AI 활용 개발</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CLIENTS ===== -->
+<section class="clients" id="clients">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">CLIENTS</div>
+      <h2>함께한 기업</h2>
+      <p>에너지 · 공공부터 금융 · 교육 · 제조까지, 산업을 넘나든 21개 고객사.</p>
+    </div>
+
+    <div class="cgroup rv">
+      <h3>에너지</h3>
+      <div class="cgrid">
+        <div class="cc"><img class="clogo" src="assets/img/logo_kdn.png" alt="한전KDN 로고" loading="lazy" onerror="this.style.display='none'"><b>한전KDN</b><p>모바일 원전건설 · ERP 고도화</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_kepco.png" alt="한국전력공사 로고" loading="lazy" onerror="this.style.display='none'"><b>한국전력공사</b><p>사내 포털 EP 리디자인</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_khnp.png" alt="한수원 로고" loading="lazy" onerror="this.style.display='none'"><b>한수원</b><p>통합 원전건설관리 표준화</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_pinecni.png" alt="파인씨앤아이 로고" loading="lazy" onerror="this.style.display='none'"><b>파인씨앤아이</b><p>한수원 발전운영 포털</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_jb-corp.png" alt="중부도시가스 로고" loading="lazy" onerror="this.style.display='none'"><b>중부도시가스</b><p>차세대 웹 (Java)</p></div>
+      </div>
+    </div>
+
+    <div class="cgroup rv">
+      <h3>금융</h3>
+      <div class="cgrid">
+        <div class="cc"><img class="clogo" src="assets/img/logo_woori-fni.png" alt="우리금융에프앤아이 로고" loading="lazy" onerror="this.style.display='none'"><b>우리금융에프앤아이</b><p>전산시스템 구축</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_fss.png" alt="금융감독원 로고" loading="lazy" onerror="this.style.display='none'"><b>금융감독원</b><p>경영정보 시스템</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_saehan-ci.png" alt="새한신용정보 로고" loading="lazy" onerror="this.style.display='none'"><b>새한신용정보</b><p>채권추심 포털 · 그리드 UI</p></div>
+      </div>
+    </div>
+
+    <div class="cgroup rv">
+      <h3>공공 · 유통</h3>
+      <div class="cgrid">
+        <div class="cc"><img class="clogo" src="assets/img/logo_at-center.png" alt="atCenter 로고" loading="lazy" onerror="this.style.display='none'"><b>atCenter</b><p>비축농산물 전자입찰 PC/Mobile</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_at-center.png" alt="농산물품질관리원 로고" loading="lazy" onerror="this.style.display='none'"><b>농산물품질관리원</b><p>Devpack SDI 모바일 패키지</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_emart24.png" alt="이마트24 (한샘개발) 로고" loading="lazy" onerror="this.style.display='none'"><b>이마트24 (한샘개발)</b><p>차세대 경영주 모바일</p></div>
+      </div>
+    </div>
+
+    <div class="cgroup rv">
+      <h3>교육</h3>
+      <div class="cgrid">
+        <div class="cc"><img class="clogo" src="assets/img/logo_hanyang-univ.png" alt="한양대학교 로고" loading="lazy" onerror="this.style.display='none'"><b>한양대학교</b><p>교내정보시스템 고도화</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_kcu.png" alt="숭실사이버대학교 로고" loading="lazy" onerror="this.style.display='none'"><b>숭실사이버대학교</b><p>학사관리 시스템</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_kyowon.png" alt="교원그룹 로고" loading="lazy" onerror="this.style.display='none'"><b>교원그룹</b><p>SAP 기반 업무포털</p></div>
+      </div>
+    </div>
+
+    <div class="cgroup rv">
+      <h3>건설 · 제조 · 기업</h3>
+      <div class="cgrid">
+        <div class="cc"><img class="clogo" src="assets/img/logo_doosan-enc.png" alt="두산건설 로고" loading="lazy" onerror="this.style.display='none'"><b>두산건설</b><p>DOOIT 시스템</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_kunwon-arch.png" alt="건원건축 로고" loading="lazy" onerror="this.style.display='none'"><b>건원건축</b><p>KIS ERP · 채용관리 모바일</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_icd.png" alt="ICD 로고" loading="lazy" onerror="this.style.display='none'"><b>ICD</b><p>안성 포털사이트</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_semes.png" alt="세메스 로고" loading="lazy" onerror="this.style.display='none'"><b>세메스</b><p>통합 개발 · 운영 플랫폼 (삼성 계열)</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_kisco.png" alt="한국철강 로고" loading="lazy" onerror="this.style.display='none'"><b>한국철강</b><p>입출고 관리 시스템</p></div>
+        <div class="cc"><img class="clogo" src="assets/img/logo_kte.png" alt="KTE 로고" loading="lazy" onerror="this.style.display='none'"><b>KTE</b><p>통합포털 사이트</p></div>
+        <div class="cc"><b>이젠고</b><p>사내 솔루션(Devpack) 디자인 · 자동화</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER / CONTACT ===== -->
+<footer class="foot" id="contact">
+  <div class="wrap">
+    <h2>함께 일해요</h2>
+    <p>시스템 UI부터 실운영 웹까지, 처음부터 끝까지 맡길 수 있는 사람을 찾고 계시다면.</p>
+    <div class="flinks">
+      <!-- 이메일 교체 -->
+      <a class="flink solid" href="mailto:coolestholic@gmail.com"><span class="ms" aria-hidden="true">mail</span>이메일</a>
+      <!-- GitHub 교체 -->
+      <a class="flink" href="https://github.com/yonghyeoncho-dev" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.1-1.47-1.1-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>GitHub</a>
+      <a class="flink" href="https://maplelog.gg" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>maplelog.gg</a>
+    </div>
+    <div class="fcopy">© 2026 조용현. 이 사이트도 직접 만들었습니다.</div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var nav=document.getElementById('nav');
+  var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>8)};
+  onScroll();window.addEventListener('scroll',onScroll,{passive:true});
+
+  var burger=document.getElementById('burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',function(){menu.classList.toggle('open')});
+  menu.addEventListener('click',function(e){if(e.target.tagName==='A')menu.classList.remove('open')});
+
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}});
+  },{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+})();
+</script>
+</body>
+</html>
