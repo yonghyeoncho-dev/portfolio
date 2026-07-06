@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.*",
+      "**/node_modules/**",
+      "**/original_backup/**",
+      "**/trimmed_backup/**",
+      "**/*.py",
+      "**/*.log",
+      "404.html"
+    ]
+  }
+}
