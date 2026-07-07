@@ -5,12 +5,14 @@
       "firebase.json",
       ".firebaserc",
       "**/.*",
+      ".git/**",
       "**/node_modules/**",
       "**/original_backup/**",
       "**/trimmed_backup/**",
+      "**/trimmed/**",
+      "**/logos_ready/**",
       "**/*.py",
-      "**/*.log",
-      "404.html"
+      "**/*.log"
     ]
   }
 }
