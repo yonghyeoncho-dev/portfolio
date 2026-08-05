@@ -304,3 +304,245 @@ a.chip:hover{border-color:var(--text)}
   .tb dd{padding:0 0 12px;border-bottom:0}
   .shead h2{font-size:32px}
 }
+
+/* ==========================================================================
+   2026-08-05 — 섹션 순서 재배치 · 레퍼런스/연혁 블록 이식
+   이젠고 UI Re-Styler 사례 페이지 CSS를 수치까지 그대로 옮기고
+   색상 토큰만 포트폴리오 것으로 치환.
+     --color-accent → --accent   / --color-border    → --line
+     --color-text   → --text     / --color-text-light → --muted
+     --color-bg-soft → --paper
+   ========================================================================== */
+
+/* --- 배경 통일: 교차 없이 전 섹션 흰색 --- */
+.reasons,.solo,.featured,.projects,.docs,.skills,.clients{background:var(--card)}
+
+/* ===== 레퍼런스 그룹 라벨 ===== */
+.ref-group{margin-bottom:46px}
+.ref-group:last-child{margin-bottom:0}
+.ref-label{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;letter-spacing:1px;margin-bottom:22px}
+.ref-label .dot{width:8px;height:8px;border-radius:50%;flex:none}
+.ref-label.primary{color:var(--accent)}
+.ref-label.primary .dot{background:var(--accent)}
+.ref-label.muted{color:var(--muted)}
+.ref-label.muted .dot{background:var(--muted)}
+.ref-label .cnt{color:var(--muted);font-weight:600;letter-spacing:0}
+
+/* ===== 대표 레퍼런스 카드 (3열) ===== */
+.ref-featured{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.ref-feat{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:border-color .2s ease,box-shadow .2s ease}
+.ref-feat[data-goto]{cursor:pointer}
+.ref-feat:hover,.ref-feat:focus-visible{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);outline:none}
+.rf-logo{width:100%;height:150px;display:flex;align-items:center;justify-content:center;padding:12px;border-bottom:1px solid var(--line)}
+.rf-logo img{max-width:100%;max-height:100%;object-fit:contain}
+.rf-logo .rf-fallback{display:none;font-size:26px;font-weight:800;letter-spacing:-.5px;color:var(--accent-dark)}
+.rf-body{flex:1;display:flex;flex-direction:column;gap:18px;padding:20px 24px 22px}
+.rf-desc{font-size:15px;line-height:1.65;color:var(--text);margin:0}
+.rf-meta{margin-top:auto;display:flex;align-items:center;gap:10px;font-size:15px}
+.rf-name{font-weight:600;color:var(--muted);letter-spacing:-.2px}
+.rf-meta .bar{width:1px;height:13px;background:var(--line)}
+.rf-tag{font-weight:700;color:var(--accent)}
+
+/* ===== 전체 레퍼런스 로고 그리드 (5열 · 소스 800x400 투명 원본 전제) ===== */
+.logo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.logo-cell{display:flex;flex-direction:column;padding:20px 14px 18px;background:var(--card);border:1px solid var(--line);border-radius:12px;transition:border-color .2s ease,box-shadow .2s ease}
+.logo-cell:hover{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.lc-logo{height:96px;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.lc-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block}
+.lc-fallback{display:none;font-size:17px;font-weight:800;letter-spacing:-.5px;line-height:1.35;color:var(--accent-dark);text-align:center}
+.lc-name{font-size:15px;font-weight:700;letter-spacing:-.3px;color:var(--text);text-align:center;margin-bottom:6px}
+.lc-desc{font-size:13.5px;line-height:1.55;color:var(--muted);text-align:center;margin:0}
+
+/* ===== 연혁 타임라인 (리스타일러 전환 프로젝트 연혁 구조) ===== */
+.tl{display:block;position:relative;margin-top:46px;padding-left:34px;row-gap:0}
+.tl::before{content:"";position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--line)}
+.tl-yr{position:relative;padding:6px 0 18px 24px;font-size:26px;font-weight:800;letter-spacing:-.5px;color:var(--text)}
+.tl-yr::before{content:"";position:absolute;left:-32px;top:16px;width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.tl-era{display:block;font-size:14px;font-weight:600;letter-spacing:0;color:var(--accent);margin-top:6px}
+.tl-item{position:relative;padding:0 0 42px 24px}
+.tl-item:last-child{padding-bottom:6px}
+.tl-item::before{content:"";position:absolute;left:-32px;top:5px;width:16px;height:16px;border-radius:50%;background:var(--card);border:3px solid var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.tl-card{margin-top:10px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:24px 26px;transition:box-shadow .3s ease,border-color .3s ease}
+.tl-card:hover{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
+.tl-tag{display:inline-block;font-size:15px;font-weight:700;letter-spacing:1.2px;color:var(--muted);background:var(--line2);border-radius:999px;padding:4px 12px;margin-bottom:10px}
+.tl-tag.lead{color:var(--accent);background:var(--accent-soft)}
+.tl-card h3{font-size:20px;font-weight:700;letter-spacing:-.5px;color:var(--text);margin:0 0 8px}
+.tl-card p{font-size:15px;line-height:1.7;color:var(--muted);margin:0}
+.tl-meta{margin-top:14px;padding-top:12px;border-top:1px solid var(--line);font-size:15px;font-weight:600;color:var(--muted);letter-spacing:.1px}
+.tl-meta .ing{color:var(--accent)}
+.tl-item.flash .tl-card{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+
+/* (다크모드 제거로 로고 반전 규칙 삭제 — 2026-08-05) */
+
+@media (max-width:1024px){
+  .ref-featured{gap:14px}
+  .rf-logo{height:120px}
+  .logo-grid{grid-template-columns:repeat(4,1fr);gap:14px}
+}
+@media (max-width:768px){
+  .ref-featured{grid-template-columns:1fr}
+  .rf-logo{height:130px}
+  .logo-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .logo-cell{padding:16px 12px 14px}
+  .lc-logo{height:64px}
+  .tl{padding-left:26px}
+  .tl-item{padding-left:16px}
+  .tl-card{padding:20px 18px}
+}
+
+/* ==========================================================================
+   2026-08-05 (2) — 상단 헤더 · 텍스트 등장 효과
+   리스타일러 common.css 헤더 규칙을 grep으로 뽑아 수치 그대로 이식.
+   원본 대비 의도적 차이는 두 가지뿐:
+     · position: fixed → sticky  (fixed는 body padding-top이 필요해 히어로가 가려짐.
+       페이지가 최상단에서 시작하므로 sticky와 시각적으로 동일)
+     · 768px 이하에서 nav를 숨기지 않음 (원페이지라 드로어가 필요)
+   ========================================================================== */
+
+:root{--header-height:84px}
+
+/* ===== 헤더 ===== */
+.nav{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.06);
+     border-bottom:1px solid var(--line);
+     transition:background .3s ease,box-shadow .3s ease}
+.nav.scrolled{background:#fff;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.nav-in{position:relative;max-width:none;margin:0;
+        height:var(--header-height);padding:0 max(50px,9%);
+        display:flex;align-items:center;justify-content:flex-start}
+
+/* 로고 자리 = .brand */
+.brand{display:flex;align-items:center;gap:10px;position:relative;z-index:2;
+       font-weight:800;font-size:20px;letter-spacing:-.5px;color:var(--text);
+       transition:color .3s ease}
+.brand small{font-size:13px;font-weight:500;color:var(--muted);margin-left:0}
+
+/* 메뉴: 헤더 폭 정중앙에 절대 배치 */
+.menu{position:absolute;left:0;right:0;top:0;height:100%;
+      display:flex;align-items:center;justify-content:center;
+      gap:50px;pointer-events:none;z-index:1}
+.menu a{pointer-events:auto;position:relative;display:flex;align-items:center;
+        height:var(--header-height);
+        color:var(--text);font-size:18px;font-weight:500;letter-spacing:-.3px;
+        transition:color .2s ease}
+
+/* 오버·활성 시 헤더 하단에 4px 액센트 보더 ON */
+.menu a::after{content:"";position:absolute;left:-16px;right:-16px;bottom:0;
+               height:4px;background:var(--accent);
+               transform:scaleX(0);transform-origin:left;
+               transition:transform .28s ease}
+.menu a:hover::after,.menu a.active::after{transform:scaleX(1)}
+
+/* 우측 아이콘 그룹 = .header-icons */
+.nav-right{display:flex;align-items:center;gap:6px;margin-left:auto;
+           position:relative;z-index:2;color:var(--text);transition:color .3s ease}
+.nav-right .theme-toggle,.nav-right .burger{
+  cursor:pointer;width:46px;height:46px;display:flex;align-items:center;justify-content:center;
+  color:inherit;background:none;border:0;border-radius:50%;
+  transition:color .2s ease,background .2s ease}
+.nav-right .theme-toggle:hover,.nav-right .burger:hover{
+  color:var(--accent);background:rgba(37,110,244,.10)}
+.nav-right .ms{font-size:28px}
+
+/* ===== 히어로 텍스트 순차 등장 (case.html fadeUp 문법) ===== */
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.hero .fu{opacity:0;animation:fadeUp .7s ease forwards}
+.hero .eyebrow.fu{animation-delay:.08s}
+.hero h1.fu{animation-delay:.16s}
+.hero .hsub.fu{animation-delay:.26s}
+.hero .pills.fu{animation-delay:.36s}
+.hero .hcta.fu{animation-delay:.46s}
+
+/* ===== 카드 그리드 순차 등장 (case.html revUp 문법) ===== */
+@keyframes revUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.ref-group.in .ref-feat,.ref-group.in .logo-cell,
+.rv.in .proj,.rv.in .sk,.rv.in .doc,.rv.in .rc{animation:revUp .5s ease backwards}
+.ref-group.in .ref-feat:nth-child(2),.ref-group.in .logo-cell:nth-child(2),
+.rv.in .proj:nth-child(2),.rv.in .sk:nth-child(2),.rv.in .doc:nth-child(2),.rv.in .rc:nth-child(2){animation-delay:.1s}
+.ref-group.in .ref-feat:nth-child(3),.ref-group.in .logo-cell:nth-child(3),
+.rv.in .proj:nth-child(3),.rv.in .sk:nth-child(3),.rv.in .doc:nth-child(3),.rv.in .rc:nth-child(3){animation-delay:.2s}
+.ref-group.in .ref-feat:nth-child(4),.ref-group.in .logo-cell:nth-child(4),
+.rv.in .sk:nth-child(4),.rv.in .doc:nth-child(4){animation-delay:.3s}
+.ref-group.in .ref-feat:nth-child(5),.ref-group.in .logo-cell:nth-child(5),
+.rv.in .sk:nth-child(5){animation-delay:.4s}
+.ref-group.in .ref-feat:nth-child(6),.ref-group.in .logo-cell:nth-child(6),
+.rv.in .sk:nth-child(6){animation-delay:.5s}
+.ref-group.in .logo-cell:nth-child(n+7){animation-delay:.55s}
+
+/* 연혁 카드: 세로 레일 구조에 맞춰 좌→우로 진입 */
+@keyframes railIn{from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:none}}
+.tl-item.rv.in{animation:railIn .5s ease backwards}
+
+/* ===== 반응형 (원본 1024 / 768 브레이크포인트) ===== */
+@media (max-width:1024px){
+  .nav-in{padding:0 24px}
+  .menu{gap:28px}
+  .menu a{font-size:14px}
+}
+@media (max-width:768px){
+  /* 원본은 nav를 숨기지만 원페이지라 드로어로 대체 */
+  .nav-in{height:auto;padding:14px 20px;flex-wrap:wrap}
+  .menu{position:static;height:auto;justify-content:flex-start;gap:20px;pointer-events:auto}
+  .menu a{height:auto;font-size:15px}
+  .menu a::after{display:none}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero .fu,.tl-item.rv.in,
+  .ref-group.in .ref-feat,.ref-group.in .logo-cell,
+  .rv.in .proj,.rv.in .sk,.rv.in .doc,.rv.in .rc{animation:none;opacity:1;transform:none}
+  .menu a::after{transition:none}
+}
+
+/* ==========================================================================
+   2026-08-05 (3) — 보더 톤 · 섹션 폭 · 연혁 칩 구조 정정
+   전부 리스타일러 실측치 기준.
+   ========================================================================== */
+
+/* 1) 보더 톤: 포트폴리오 --line(#cdd1d5)이 리스타일러(#e5e5ea)보다 훨씬 진해
+      카드가 도면처럼 보였음. 라이트 테마만 리스타일러 값으로 맞춤. */
+:root{--line:#e5e5ea;--line2:#eeeef1;
+      --paper:#f7f7f9  /* 리스타일러 --color-bg-soft 실측값 — 연혁 카드 배경 */}
+
+/* 2) 섹션 폭: 리스타일러 --max-width 1280 + padding 60 → 실제 콘텐츠 1160.
+      포트폴리오는 1160 + 32 → 1096 이라 더 좁았음. */
+.wrap{max-width:1280px;padding:0 60px}
+
+/* 3) 연혁 카드: 칩은 분야·유형, 역할은 하단 메타로 */
+.tl-tag{color:var(--accent);background:var(--accent-soft)}
+.tl-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.tl-role{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;
+         font-size:13px;font-weight:700;letter-spacing:0;
+         color:var(--muted);background:var(--line2)}
+.tl-role.lead{color:var(--accent);background:var(--accent-soft)}
+
+@media (max-width:1024px){.wrap{padding:0 24px}}
+@media (max-width:768px){.wrap{padding:0 20px}}
+
+
+/* ==========================================================================
+   2026-08-05 (4) — 햄버거 버튼 노출 버그 수정
+   .nav-right 로 옮기면서 준 display:flex 가 base 의 .burger{display:none} 을
+   특이도로 눌러버려 데스크톱에서도 보이고 있었음.
+   ========================================================================== */
+.nav-right .burger{display:none}
+@media (max-width:768px){.nav-right .burger{display:flex}}
+
+/* ==========================================================================
+   2026-08-05 (5) — 다크모드 제거
+   토글 버튼과 테마 스크립트를 index.html 에서 걷어냈습니다.
+   base 의 [data-theme] 블록은 남겨두었으나 어떤 것도 data-theme 속성을
+   설정하지 않으므로 실행되지 않습니다. 나중에 되살릴 때 그대로 씁니다.
+   ========================================================================== */
+
+/* 헤더 우측이 비지 않도록 라이브 서비스 링크 배치
+   (리스타일러 .ez-cta pill 문법) */
+.nav-cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  height:38px;padding:0 20px;box-sizing:border-box;line-height:1;
+  border-radius:999px;white-space:nowrap;
+  font-size:16px;font-weight:500;letter-spacing:-.2px;
+  color:var(--accent);background:var(--card);border:1.5px solid var(--accent);
+  transition:background .18s ease,color .18s ease}
+.nav-cta:hover{background:var(--accent);color:#fff}
+
+@media (max-width:768px){.nav-cta{display:none}}

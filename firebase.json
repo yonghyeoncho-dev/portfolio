@@ -12,7 +12,8 @@
       "**/trimmed/**",
       "**/logos_ready/**",
       "**/*.py",
-      "**/*.log"
+      "**/*.log",
+      "tools/**"
     ]
   }
 }
