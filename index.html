@@ -19,8 +19,8 @@
   <div class="nav-in">
     <div class="brand">조용현<small>UI 아키텍트 · 프론트엔드 · PL</small></div>
     <nav class="menu" id="menu">
-      <a href="#sites">혼자 만든 것</a>
       <a href="#ops">운영 도구</a>
+      <a href="#sites">혼자 만든 것</a>
       <a href="#verify">이력 검증</a>
       <a href="#contact">연락처</a>
     </nav>
@@ -45,57 +45,7 @@
   </div>
 </section>
 
-<!-- ===== 1. 만든 사이트 ===== -->
-<section class="sites" id="sites">
-  <div class="wrap">
-    <div class="shead rv">
-      <div class="kick">SOLO BUILT</div>
-      <h2>혼자 만들고, 혼자 운영합니다</h2>
-      <p>기획 · 화면 · 데이터 · 배포 · 운영까지 나눠 맡은 사람 없이 진행했습니다.
-         셋 다 지금 눌러보실 수 있습니다.</p>
-    </div>
-    <div class="site-grid">
-      <article class="site rv">
-        <div class="ph"><img src="assets/img/shot_maplelog.png" alt="maplelog.gg 화면" loading="lazy"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="ph-fb">준비 중</span></div>
-        <div class="sb">
-          <div class="sh"><h3>maplelog.gg</h3><span class="badge live">Live · 운영 중</span></div>
-          <p>기획 · DB · 프론트 · 배포 · 운영을 혼자 맡고 있는 실서비스입니다. 역할 기반 권한 모델과 관리자 콘솔까지 직접 설계했습니다.</p>
-          <div class="glinks">
-            <a class="chip" href="https://maplelog.gg" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>서비스 열기</a>
-            <span class="chip st">Vanilla JS SPA</span><span class="chip st">Firestore</span><span class="chip st">Cloud Functions</span>
-          </div>
-        </div>
-      </article>
-      <article class="site rv">
-        <div class="ph"><img src="assets/img/shot_maplelog_react.png" alt="maplelog-react 화면" loading="lazy"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="ph-fb">준비 중</span></div>
-        <div class="sb">
-          <div class="sh"><h3>maplelog-react</h3><span class="badge ">리빌드 진행 중</span></div>
-          <p>직접 만든 SPA의 라우팅 · 상태 · 렌더링을 React Router와 훅으로 옮기고 있습니다. 실제 아이템 <b class="mono">2,662</b>종 연동 완료.</p>
-          <div class="glinks">
-            <a class="chip" href="https://github.com/yonghyeoncho-dev/maplelog-react" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>저장소 보기</a>
-            <span class="chip st">React</span><span class="chip st">TypeScript</span><span class="chip st">Vite</span>
-          </div>
-        </div>
-      </article>
-      <article class="site rv">
-        <div class="ph"><img src="assets/img/shot_iezngo.png" alt="iezngo.co.kr 화면" loading="lazy"
-             onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><span class="ph-fb">준비 중</span></div>
-        <div class="sb">
-          <div class="sh"><h3>iezngo.co.kr</h3><span class="badge ">단독 수행 · PL</span></div>
-          <p>회사 홈 · 제품소개 · 체험 페이지를 단일 도메인으로 통합했습니다. JSP를 정적 전환하고 관리 콘솔까지 구축했습니다.</p>
-          <div class="glinks">
-            <a class="chip" href="https://iezngo.co.kr" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>사이트 열기</a>
-            <span class="chip st">HTML/CSS/JS</span><span class="chip st">Firebase Hosting</span><span class="chip st">관리자 콘솔</span>
-          </div>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 2. 운영 도구 ===== -->
+<!-- ===== 1. 운영 도구 ===== -->
 <section class="ops" id="ops">
   <div class="wrap">
     <div class="shead rv">
@@ -138,6 +88,50 @@
       <span class="chip st">Python 파싱 파이프라인</span>
       <span class="chip st">Nexacro · 엔터프라이즈 UI</span>
       <span class="chip st">AI 문서 생산 파이프라인</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. 혼자 만든 것 ===== -->
+<section class="sites" id="sites">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">SOLO BUILT</div>
+      <h2>혼자 만들고, 혼자 운영합니다</h2>
+      <p>기획 · 화면 · 데이터 · 배포 · 운영까지 나눠 맡은 사람 없이 진행했습니다.
+         셋 다 지금 눌러보실 수 있습니다.</p>
+    </div>
+    <div class="site-grid">
+      <article class="site rv">
+        <div class="sh"><h3>maplelog.gg</h3><span class="badge live">Live · 운영 중</span></div>
+        <div class="sb">
+          <p>기획 · DB · 프론트 · 배포 · 운영을 혼자 맡고 있는 실서비스입니다. 프레임워크 없이 SPA 라우팅과 상태를 직접 구현했고, 역할 기반 권한 모델과 관리자 콘솔까지 설계했습니다.</p>
+          <div class="glinks">
+            <a class="chip" href="https://maplelog.gg" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>서비스 열기</a>
+            <span class="chip st">Vanilla JS SPA</span><span class="chip st">Firestore</span><span class="chip st">Cloud Functions</span>
+          </div>
+        </div>
+      </article>
+      <article class="site rv">
+        <div class="sh"><h3>maplelog-react</h3><span class="badge">리빌드 진행 중</span></div>
+        <div class="sb">
+          <p>직접 만든 SPA의 라우팅 · 상태 · 렌더링을 React Router와 훅으로 옮기고 있습니다. 실제 아이템 <b class="mono">2,662</b>종 연동을 마쳤고, 검색 조건을 URL 쿼리로 올려 뒤로가기와 링크 공유가 동작합니다.</p>
+          <div class="glinks">
+            <a class="chip" href="https://github.com/yonghyeoncho-dev/maplelog-react" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>저장소 보기</a>
+            <span class="chip st">React</span><span class="chip st">TypeScript</span><span class="chip st">Vite</span>
+          </div>
+        </div>
+      </article>
+      <article class="site rv">
+        <div class="sh"><h3>iezngo.co.kr</h3><span class="badge">단독 수행 · PL</span></div>
+        <div class="sb">
+          <p>회사 홈 · 제품소개 · 체험 페이지를 단일 도메인으로 통합했습니다. JSP를 정적 페이지로 전환하고, 문의 접수 · 블로그 게시 관리 콘솔까지 구축해 운영을 넘겼습니다.</p>
+          <div class="glinks">
+            <a class="chip" href="https://iezngo.co.kr" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>사이트 열기</a>
+            <span class="chip st">HTML/CSS/JS</span><span class="chip st">Firebase Hosting</span><span class="chip st">관리자 콘솔</span>
+          </div>
+        </div>
+      </article>
     </div>
   </div>
 </section>
