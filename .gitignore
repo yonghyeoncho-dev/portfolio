@@ -3,3 +3,6 @@ assets/img/trimmed_backup/
 assets/img/trimmed/
 *.py
 .firebase/
+.vscode/
+CLAUDE.md
+*roadmap*.md

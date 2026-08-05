@@ -1,0 +1,53 @@
+# portfolio
+
+UI 아키텍트 조용현의 개인 포트폴리오 사이트. 기획 · 디자인 · 퍼블리싱 · 배포를 단독 수행했습니다.
+
+**Live** → [yonghyeoncho.web.app](https://yonghyeoncho.web.app)
+
+---
+
+## 무엇을 담았나
+
+7년간 공공 · 에너지 · 금융 도메인의 엔터프라이즈 업무시스템 29개를 설계 · 구축하며 만든 결과물과,
+개인 프로젝트로 기획부터 운영까지 혼자 굴리고 있는 서비스를 함께 정리했습니다.
+
+- **대표 작업** — 데브팩(사내 UI 표준 · 디자인 시스템), UI컨버전 자동화 솔루션
+- **프로젝트** — 22개 고객사 29개 시스템의 타임라인
+- **직접 만든 것** — [maplelog.gg](https://maplelog.gg) 등 개인 실운영 서비스
+- **기술 · 함께한 기업 · 연락처**
+
+## 어떻게 만들었나
+
+프레임워크 없이 HTML · CSS · Vanilla JS로 작성했습니다.
+UI 표준을 만드는 일을 해온 사람의 사이트인 만큼, 구조와 토큰을 직접 정의하는 쪽을 택했습니다.
+
+| 항목 | 내용 |
+|---|---|
+| 마크업 · 스타일 | HTML5, CSS (커스텀 프로퍼티 기반 토큰) |
+| 스크립트 | Vanilla JS (스크롤 리빌, 테마 토글, 타임라인 인터랙션) |
+| 디자인 토큰 | KRDS(공공 UI 표준) 그레이 스케일 · 타이포 스케일 참조, primary `#256ef4` |
+| 폰트 · 아이콘 | Pretendard, JetBrains Mono, Material Symbols Rounded |
+| 접근성 | 시맨틱 마크업, `aria-*` 속성, 키보드 내비게이션 고려 |
+| 호스팅 | Firebase Hosting |
+
+### 구조
+
+```
+portfolio/
+├── index.html      # 단일 페이지 (섹션 앵커 내비게이션)
+├── css/style.css   # 디자인 토큰 + 컴포넌트 스타일
+├── assets/
+│   ├── img/        # 배너 등 이미지
+│   └── logos/      # 고객사 로고 (투명화 · 여백 제거 · 면적 정규화 처리)
+└── firebase.json   # 호스팅 설정
+```
+
+## 기록에 대해
+
+이 저장소의 커밋 내역이 곧 작업 과정입니다.
+현재는 [maplelog-react](https://github.com/yonghyeoncho-dev/maplelog-react) 저장소에서
+maplelog.gg를 React · TypeScript로 리빌드하는 작업을 함께 진행하고 있습니다.
+
+---
+
+© 2026 조용현
