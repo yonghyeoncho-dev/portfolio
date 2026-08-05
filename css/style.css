@@ -84,10 +84,15 @@ ul{list-style:none}
 /* ==========================================================================
    HERO
    ========================================================================== */
-.hero{position:relative;overflow:hidden;background:var(--ink);color:#fff;padding:88px 0 82px}
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42;z-index:0}
+/* 히어로 배경 — Haikei Blurry Gradient SVG
+   파일: assets/img/hero-gradient.svg  (style.css 기준 상대경로 ../)
+   SVG는 900x600이지만 벡터라 cover로 늘려도 깨지지 않음 */
+.hero{position:relative;overflow:hidden;color:#fff;padding:88px 0 82px;background:#0B0E18}
+.hero-bg{position:absolute;inset:0;z-index:0;
+  background:url("../assets/img/hero-gradient.svg") center/cover no-repeat}
+/* 좌측 스크림 — 글자 가독성 확보. 우측은 열어둬 그라디언트가 살아남 */
 .hero::before{content:"";position:absolute;inset:0;z-index:1;
-  background:linear-gradient(105deg,rgba(19,20,22,.94) 42%,rgba(19,20,22,.62) 100%)}
+  background:linear-gradient(100deg,rgba(8,10,18,.90) 26%,rgba(8,10,18,.58) 62%,rgba(8,10,18,.22) 100%)}
 .hero-in{position:relative;z-index:2}
 .hero .eyebrow{font-size:15px;font-weight:700;color:#86aff9;letter-spacing:.06em;margin-bottom:16px}
 .hero h1{font-size:44px;font-weight:800;letter-spacing:-.025em;line-height:1.28}
@@ -119,8 +124,12 @@ section{padding-bottom:80px}
 .site{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);
       border-radius:16px;overflow:hidden;transition:border-color .2s ease,box-shadow .2s ease}
 .site:hover{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
-.ph{position:relative;aspect-ratio:16/10;border-bottom:1px solid var(--line2);background:var(--paper)}
-.ph img{width:100%;height:100%;object-fit:cover;object-position:top}
+/* 스크린샷 영역 — 이미지 원본 비율과 무관하게 항상 16:10 고정.
+   img를 absolute로 깔아야 아래 카드 높이를 밀어올리지 않음 */
+.ph{position:relative;flex:none;aspect-ratio:16/10;overflow:hidden;
+    border-bottom:1px solid var(--line2);background:var(--paper)}
+.ph img{position:absolute;inset:0;width:100%;height:100%;
+        object-fit:cover;object-position:top center}
 .ph-fb{display:none;position:absolute;inset:0;align-items:center;justify-content:center;
        font-size:13.5px;font-weight:600;color:var(--faint);
        background:repeating-conic-gradient(var(--line2) 0 25%,var(--paper) 0 50%) 0 0/22px 22px}
@@ -143,7 +152,7 @@ section{padding-bottom:80px}
 /* ==========================================================================
    2. 운영 도구
    ========================================================================== */
-.ops-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
+.ops-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px}
 .op{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 26px;
     transition:border-color .2s ease,box-shadow .2s ease}
 .op:hover{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
@@ -160,7 +169,7 @@ section{padding-bottom:80px}
 .cl:last-child{border-bottom:0}
 .cl .cn{flex:none;min-width:112px;font-weight:700}
 .cl .cd{color:var(--muted);line-height:1.6}
-.opstack{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.opstack{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
 
 /* ==========================================================================
    3. 이력 검증
@@ -172,8 +181,10 @@ section{padding-bottom:80px}
 
 /* 로고 카드 5열 — 리스타일러 실측치 (소스 800x400 캔버스 전제)
    .lc-logo 96px / gap 16 / padding 20 14 18 — 임의로 줄이지 말 것 */
-.logo-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-.logo-cell{display:flex;flex-direction:column;padding:20px 14px 18px;
+/* 5열 · 마지막 줄은 왼쪽 정렬 (grid와 동일한 흐름) */
+.logo-grid{display:flex;flex-wrap:wrap;justify-content:flex-start;gap:16px}
+.logo-cell{flex:0 0 calc((100% - 64px)/5)}
+.logo-cell{display:flex;flex-direction:column;min-width:0;padding:20px 14px 18px;
            background:var(--card);border:1px solid var(--line);border-radius:12px;
            transition:border-color .2s ease,box-shadow .2s ease}
 .logo-cell:hover{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
@@ -181,28 +192,18 @@ section{padding-bottom:80px}
 .lc-logo img{max-width:100%;max-height:100%;object-fit:contain;display:block}
 .lc-fallback{display:none;font-size:17px;font-weight:800;letter-spacing:-.5px;line-height:1.35;
              color:var(--accent-dark);text-align:center}
-.lc-name{font-size:15px;font-weight:700;letter-spacing:-.3px;color:var(--text);
-         text-align:center;margin-bottom:6px}
-.lc-desc{flex:1;font-size:13.5px;line-height:1.55;color:var(--muted);text-align:center}
-/* 역할 표기 — 리스타일러 .rf-tag 문법(칩 아닌 굵은 텍스트) */
-.lc-role{margin-top:10px;font-size:13.5px;font-weight:700;letter-spacing:-.2px;
-         color:var(--accent);text-align:center}
+/* 기업명 | 역할 한 줄 — 리스타일러 .rf-meta 문법 (name · bar · tag) */
+.lc-name{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:8px;
+         font-size:14px;font-weight:700;letter-spacing:-.3px;line-height:1.4;
+         color:var(--text);text-align:center;margin-bottom:7px}
+.lc-name .bar{width:1px;height:12px;background:var(--line);flex:none;align-self:center}
+.lc-role{font-size:14px;font-weight:700;letter-spacing:-.3px;line-height:1.4;color:var(--accent)}
+.lc-desc{font-size:13.5px;line-height:1.55;color:var(--muted);text-align:center}
 
 /* ==========================================================================
    4. CTA 밴드 + 푸터 (이젠고 footer-v2 구조)
    ========================================================================== */
-.cta-band{background:var(--ink);color:#fff;margin-top:96px;padding:76px 0;text-align:center}
-.cta-band h2{font-size:34px;font-weight:800;letter-spacing:-.022em}
-.cta-band p{color:#c8cdd4;margin-top:12px;font-size:16px}
-.cta-btns{display:flex;gap:12px;justify-content:center;margin-top:30px;flex-wrap:wrap}
-.cbtn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border-radius:11px;
-      font-size:16px;font-weight:600;color:#fff;border:1px solid rgba(255,255,255,.28);
-      transition:background .18s ease}
-.cbtn.p{background:var(--accent);border-color:var(--accent)}
-.cbtn:hover{background:rgba(255,255,255,.12)}
-.cbtn.p:hover{background:var(--accent-dark)}
-
-.footer-v2{padding:56px clamp(24px,6vw,100px) 44px;background:#222}
+.footer-v2{margin-top:96px;padding:64px clamp(24px,6vw,100px) 44px;background:#222}
 .footer-social{max-width:1280px;margin:0 auto 40px;display:flex;gap:14px}
 .footer-social a{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;
                  justify-content:center;color:#c7ccd4;background:rgba(255,255,255,.07);
@@ -234,7 +235,8 @@ section{padding-bottom:80px}
   .site-grid{grid-template-columns:1fr 1fr}
   .ops-grid{grid-template-columns:1fr}
   .stats{grid-template-columns:repeat(3,1fr)}
-  .logo-grid{grid-template-columns:repeat(4,1fr);gap:14px}
+  .logo-grid{gap:14px}
+  .logo-cell{flex:0 0 calc((100% - 42px)/4)}
   .footer-cols{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
 }
 @media (max-width:768px){
@@ -253,14 +255,13 @@ section{padding-bottom:80px}
   .shead{padding-top:50px;margin-bottom:28px}
   .shead h2{font-size:27px}
   .site-grid{grid-template-columns:1fr}
-  .logo-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .logo-grid{gap:10px}
+  .logo-cell{flex:0 0 calc((100% - 10px)/2)}
   .logo-cell{padding:16px 12px 14px}
   .lc-logo{height:64px}
   .footer-cols{grid-template-columns:1fr}
   .cl{flex-direction:column;gap:4px}
   .cl .cn{min-width:0}
-  .cta-band{padding:56px 0;margin-top:72px}
-  .cta-band h2{font-size:26px}
 }
 
 @media (prefers-reduced-motion:reduce){
