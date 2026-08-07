@@ -148,6 +148,11 @@
       </div>
       <div class="lg-stats"><span><b class="mono">29</b>프로젝트</span><span><b class="mono">22</b>고객사</span><span><b class="mono">13</b>PL 수행</span></div>
     </div>
+    <div class="lg-filter" role="group" aria-label="역할로 프로젝트 필터">
+      <button type="button" class="lg-chip is-on" data-filter="all" aria-pressed="true">전체(29)</button>
+      <button type="button" class="lg-chip" data-filter="lead" aria-pressed="false">설계·PL(13)</button>
+      <button type="button" class="lg-chip" data-filter="design" aria-pressed="false">디자인·퍼블(16)</button>
+    </div>
     <div class="lg-board rv">
       <div class="lg-cols"><span>NO</span><span>고객사</span><span>프로젝트</span><span>기간</span><span>역할</span><span>비고</span></div>
       <div class="lg-cap">설계 · PL 주도</div>
@@ -515,6 +520,46 @@
   }
 
 
+})();
+</script>
+
+<script>
+// LEDGER 역할 필터 칩 — 진행적 향상. 스크립트가 없으면 표는 기본 상태 그대로 노출된다.
+(function(){
+  var board=document.querySelector('#projects .lg-board');
+  var chips=document.querySelectorAll('#projects .lg-filter .lg-chip');
+  if(!board||!chips.length)return;
+  var g1cap=board.querySelector(':scope > .lg-cap');
+  var g1rows=board.querySelectorAll(':scope > .lg-row');
+  var details=board.querySelector(':scope > details.lg-fold');
+
+  function show(el,on){if(el)el.style.display=on?'':'none';}
+
+  function apply(mode){
+    if(mode==='lead'){          // 설계·PL만 — 디자인·퍼블 그룹(details) 숨김
+      show(g1cap,true);
+      g1rows.forEach(function(r){r.style.display='';});
+      show(details,false);
+    }else if(mode==='design'){  // 디자인·퍼블만 — 설계·PL 행·캡션 숨김, details 자동 open
+      show(g1cap,false);
+      g1rows.forEach(function(r){r.style.display='none';});
+      show(details,true);
+      if(details)details.open=true;
+    }else{                      // 전체 — 원상 복귀, details는 다시 닫기
+      show(g1cap,true);
+      g1rows.forEach(function(r){r.style.display='';});
+      show(details,true);
+      if(details)details.open=false;
+    }
+    chips.forEach(function(c){
+      var on=c.getAttribute('data-filter')===mode;
+      c.setAttribute('aria-pressed',on?'true':'false');
+      c.classList.toggle('is-on',on);
+    });
+  }
+  chips.forEach(function(c){
+    c.addEventListener('click',function(){apply(c.getAttribute('data-filter'));});
+  });
 })();
 </script>
 </body>

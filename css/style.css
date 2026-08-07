@@ -296,6 +296,14 @@ section{padding-bottom:80px}
 .lg-hint.on{display:none}
 .lg-fold[open] .lg-hint{display:none}
 .lg-fold[open] .lg-hint.on{display:inline-flex}
+/* 역할 필터 칩 — 진행적 향상(JS 없으면 표는 그대로 노출) */
+.lg-filter{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.lg-chip{font-size:13px;font-weight:600;padding:7px 15px;border-radius:999px;cursor:pointer;
+         background:var(--card);border:1px solid var(--line);color:var(--muted);
+         transition:background .15s ease,color .15s ease,border-color .15s ease}
+.lg-chip:hover{border-color:var(--accent);color:var(--accent)}
+.lg-chip.is-on{background:var(--accent);border-color:var(--accent);color:#fff}
+.lg-chip.is-on:hover{color:#fff}
 @media (max-width:820px){
   .sb{grid-template-columns:1fr;gap:12px}
   .sb-id{flex-direction:row;justify-content:flex-start;align-items:center}
