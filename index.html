@@ -21,6 +21,7 @@
     <nav class="menu" id="menu">
       <a href="#ops">운영 도구</a>
       <a href="#sites">혼자 만든 것</a>
+      <a href="#projects">전체 이력</a>
       <a href="#verify">이력 검증</a>
       <a href="#contact">연락처</a>
     </nav>
@@ -101,42 +102,266 @@
       <p>기획 · 화면 · 데이터 · 배포 · 운영까지 나눠 맡은 사람 없이 진행했습니다.
          셋 다 지금 눌러보실 수 있습니다.</p>
     </div>
-    <div class="site-grid">
-      <article class="site rv">
-        <div class="sh"><h3>maplelog.gg</h3><span class="badge live">Live · 운영 중</span></div>
-        <div class="sb">
+    <div class="sb-list">
+      <div class="sb rv">
+        <div class="sb-id"><b>maplelog.gg</b><span class="sb-st live">Live · 운영 중</span></div>
+        <div class="sb-body">
           <p>기획 · DB · 프론트 · 배포 · 운영을 혼자 맡고 있는 실서비스입니다. 프레임워크 없이 SPA 라우팅과 상태를 직접 구현했고, 역할 기반 권한 모델과 관리자 콘솔까지 설계했습니다.</p>
-          <div class="glinks">
-            <a class="chip" href="https://maplelog.gg" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>서비스 열기</a>
-            <span class="chip st">Vanilla JS SPA</span><span class="chip st">Firestore</span><span class="chip st">Cloud Functions</span>
+          <div class="sb-foot">
+            <a class="sb-link" href="https://maplelog.gg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14 21 3M21 3v7M21 3h-7M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>서비스 열기</a>
+            <span class="sb-chip">Vanilla JS SPA</span><span class="sb-chip">Firestore</span><span class="sb-chip">Cloud Functions</span>
           </div>
         </div>
-      </article>
-      <article class="site rv">
-        <div class="sh"><h3>maplelog-react</h3><span class="badge">리빌드 진행 중</span></div>
-        <div class="sb">
-          <p>직접 만든 SPA의 라우팅 · 상태 · 렌더링을 React Router와 훅으로 옮기고 있습니다. 실제 아이템 <b class="mono">2,662</b>종 연동을 마쳤고, 검색 조건을 URL 쿼리로 올려 뒤로가기와 링크 공유가 동작합니다.</p>
-          <div class="glinks">
-            <a class="chip" href="https://github.com/yonghyeoncho-dev/maplelog-react" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>저장소 보기</a>
-            <span class="chip st">React</span><span class="chip st">TypeScript</span><span class="chip st">Vite</span>
+      </div>
+      <div class="sb rv">
+        <div class="sb-id"><b>maplelog-react</b><span class="sb-st wip">리빌드 진행 중</span></div>
+        <div class="sb-body">
+          <p>직접 만든 SPA의 라우팅 · 상태 · 렌더링을 React Router와 훅으로 옮기고 있습니다. 실제 아이템 2,662종 연동을 마쳤고, 검색 조건을 URL 쿼리로 올려 뒤로가기와 링크 공유가 동작합니다.</p>
+          <div class="sb-foot">
+            <a class="sb-link" href="https://github.com/yonghyeoncho-dev/maplelog-react" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14 21 3M21 3v7M21 3h-7M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>저장소 보기</a>
+            <span class="sb-chip">React</span><span class="sb-chip">TypeScript</span><span class="sb-chip">Vite</span>
           </div>
         </div>
-      </article>
-      <article class="site rv">
-        <div class="sh"><h3>iezngo.co.kr</h3><span class="badge">단독 수행 · PL</span></div>
-        <div class="sb">
+      </div>
+      <div class="sb rv">
+        <div class="sb-id"><b>iezngo.co.kr</b><span class="sb-st pl">단독 수행 · PL</span></div>
+        <div class="sb-body">
           <p>회사 홈 · 제품소개 · 체험 페이지를 단일 도메인으로 통합했습니다. JSP를 정적 페이지로 전환하고, 문의 접수 · 블로그 게시 관리 콘솔까지 구축해 운영을 넘겼습니다.</p>
-          <div class="glinks">
-            <a class="chip" href="https://iezngo.co.kr" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">open_in_new</span>사이트 열기</a>
-            <span class="chip st">HTML/CSS/JS</span><span class="chip st">Firebase Hosting</span><span class="chip st">관리자 콘솔</span>
+          <div class="sb-foot">
+            <a class="sb-link" href="https://iezngo.co.kr" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14 21 3M21 3v7M21 3h-7M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>사이트 열기</a>
+            <span class="sb-chip">HTML/CSS/JS</span><span class="sb-chip">Firebase Hosting</span><span class="sb-chip">관리자 콘솔</span>
           </div>
         </div>
-      </article>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ===== 3. 이력 검증 ===== -->
+<!-- ===== 3. 전체 이력 (PROJECT LEDGER) ===== -->
+<section class="ledger" id="projects">
+  <div class="wrap">
+    <div class="shead rv lg-head">
+      <div>
+        <div class="kick">PROJECT LEDGER</div>
+        <h2>프로젝트 전체 이력</h2>
+        <p>2019.08 – 현재 · 설계 · PL로 주도한 건을 앞에, 초기 퍼블리싱 건을 뒤에 두었습니다.</p>
+      </div>
+      <div class="lg-stats"><span><b class="mono">29</b>프로젝트</span><span><b class="mono">22</b>고객사</span><span><b class="mono">13</b>PL 수행</span></div>
+    </div>
+    <div class="lg-board rv">
+      <div class="lg-cols"><span>NO</span><span>고객사</span><span>프로젝트</span><span>역할</span><span>비고</span></div>
+      <div class="lg-cap">설계 · PL 주도</div>
+      <div class="lg-row">
+        <span class="lg-no mono">01</span>
+        <span class="lg-co">이마트24</span>
+        <span class="lg-pj">차세대 경영주 모바일 · 관리손익 시스템</span>
+        <span class="lg-role"><span class="role top">설계·PL</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">02</span>
+        <span class="lg-co">한전KDN</span>
+        <span class="lg-pj">모바일 원전건설사업관리시스템 구축</span>
+        <span class="lg-role"><span class="role top">설계·PL</span></span>
+        <span class="lg-note">UI 구조 제안 → 실제 수주 연결</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">03</span>
+        <span class="lg-co">한전KDN</span>
+        <span class="lg-pj">한수원 경영관리 ERP 고도화</span>
+        <span class="lg-role"><span class="role top">설계·PL</span></span>
+        <span class="lg-note">4인 팀 리딩 · 14개월</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">04</span>
+        <span class="lg-co">이젠고</span>
+        <span class="lg-pj">DevPack — UI 표준 · 공통 프레임워크</span>
+        <span class="lg-role"><span class="role top">설계·PL</span></span>
+        <span class="lg-note">디자인 가이드 v1.4 직접 저술</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">05</span>
+        <span class="lg-co">이젠고</span>
+        <span class="lg-pj">UI 컨버전 자동화 도구 5종</span>
+        <span class="lg-role"><span class="role top">설계·PL</span></span>
+        <span class="lg-note">활용 가이드 v1.9 (93p) 저술</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">06</span>
+        <span class="lg-co">이젠고</span>
+        <span class="lg-pj">통합 웹사이트 iezngo.co.kr</span>
+        <span class="lg-role"><span class="role top">설계·PL</span></span>
+        <span class="lg-note">JSP → 정적 전환 · 콘솔 구축 후 이관</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">07</span>
+        <span class="lg-co">금융감독원</span>
+        <span class="lg-pj">경영정보 시스템</span>
+        <span class="lg-role"><span class="role lead">PL</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">08</span>
+        <span class="lg-co">두산건설</span>
+        <span class="lg-pj">DOOIT 업무포탈 넥사크로 컨버전</span>
+        <span class="lg-role"><span class="role lead">PL</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">09</span>
+        <span class="lg-co">한국수력원자력</span>
+        <span class="lg-pj">통합 원전건설관리시스템</span>
+        <span class="lg-role"><span class="role lead">PL</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">10</span>
+        <span class="lg-co">한국수력원자력</span>
+        <span class="lg-pj">업무포털 표준화</span>
+        <span class="lg-role"><span class="role lead">PL</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">11</span>
+        <span class="lg-co">우리금융F&I</span>
+        <span class="lg-pj">전산시스템</span>
+        <span class="lg-role"><span class="role lead">PL</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">12</span>
+        <span class="lg-co">우리금융F&I</span>
+        <span class="lg-pj">메인 디자인 가이드</span>
+        <span class="lg-role"><span class="role lead">PL</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">13</span>
+        <span class="lg-co">atCenter</span>
+        <span class="lg-pj">비축농산물 전자입찰 PC/Mobile</span>
+        <span class="lg-role"><span class="role lead">PL</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">14</span>
+        <span class="lg-co">건원건축</span>
+        <span class="lg-pj">KIS ERP</span>
+        <span class="lg-role"><span class="role lead">PL</span></span>
+        <span class="lg-note">1,000여 화면 단독 · 스카우트 제안</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">15</span>
+        <span class="lg-co">건원건축</span>
+        <span class="lg-pj">채용관리 시스템 모바일</span>
+        <span class="lg-role"><span class="role lead">PL</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <details class="lg-fold">
+      <summary class="lg-cap">디자인 · 퍼블리싱<span class="lg-hint">14건 펼치기</span><span class="lg-hint on">접기</span></summary>
+      <div class="lg-row">
+        <span class="lg-no mono">16</span>
+        <span class="lg-co">한국전력공사</span>
+        <span class="lg-pj">사내 포털 EP 리디자인</span>
+        <span class="lg-role"><span class="role">디자이너</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">17</span>
+        <span class="lg-co">알파캠퍼스</span>
+        <span class="lg-pj">AI 학습 플랫폼 LMS 디자인 스타일가이드</span>
+        <span class="lg-role"><span class="role">디자이너</span></span>
+        <span class="lg-note">38p 구축 · v1.3 개정 운영</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">18</span>
+        <span class="lg-co">한양대학교</span>
+        <span class="lg-pj">교내정보시스템 넥사크로 전환</span>
+        <span class="lg-role"><span class="role">디자인·퍼블</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">19</span>
+        <span class="lg-co">숭실사이버대</span>
+        <span class="lg-pj">학사관리 시스템</span>
+        <span class="lg-role"><span class="role">디자인·퍼블</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">20</span>
+        <span class="lg-co">새한신용정보</span>
+        <span class="lg-pj">채권추심 포털</span>
+        <span class="lg-role"><span class="role">디자인·퍼블</span></span>
+        <span class="lg-note">대용량 그리드 UI 설계</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">21</span>
+        <span class="lg-co">농산물품질관리원</span>
+        <span class="lg-pj">DevPack · SDI 모바일 패키지 적용</span>
+        <span class="lg-role"><span class="role">디자인·퍼블</span></span>
+        <span class="lg-note">적용 총괄</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">22</span>
+        <span class="lg-co">ICD</span>
+        <span class="lg-pj">안성 업무연동 포털사이트</span>
+        <span class="lg-role"><span class="role">디자인·퍼블</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">23</span>
+        <span class="lg-co">세메스</span>
+        <span class="lg-pj">통합 개발 · 운영 플랫폼</span>
+        <span class="lg-role"><span class="role">퍼블리셔</span></span>
+        <span class="lg-note">삼성 계열</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">24</span>
+        <span class="lg-co">교원그룹</span>
+        <span class="lg-pj">SAP → 넥사크로 업무포털</span>
+        <span class="lg-role"><span class="role">퍼블리셔</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">25</span>
+        <span class="lg-co">여천NCC</span>
+        <span class="lg-pj">업무포털 넥사크로 컨버전</span>
+        <span class="lg-role"><span class="role">퍼블리셔</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">26</span>
+        <span class="lg-co">한국철강</span>
+        <span class="lg-pj">입출고 관리 시스템</span>
+        <span class="lg-role"><span class="role">퍼블리셔</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">27</span>
+        <span class="lg-co">중부도시가스</span>
+        <span class="lg-pj">차세대 웹 · 웹표준 기반 구축</span>
+        <span class="lg-role"><span class="role">퍼블리셔</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">28</span>
+        <span class="lg-co">파인씨앤아이</span>
+        <span class="lg-pj">한수원 발전운영 포털</span>
+        <span class="lg-role"><span class="role">퍼블리셔</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      <div class="lg-row">
+        <span class="lg-no mono">29</span>
+        <span class="lg-co">KTE</span>
+        <span class="lg-pj">통합포털 사이트</span>
+        <span class="lg-role"><span class="role">퍼블리셔</span></span>
+        <span class="lg-note empty">—</span>
+      </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. 이력 검증 ===== -->
 <section class="verify" id="verify">
   <div class="wrap">
     <div class="shead rv">
