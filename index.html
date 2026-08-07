@@ -154,7 +154,7 @@
       <button type="button" class="lg-chip" data-filter="design" aria-pressed="false">디자인·퍼블(16)</button>
     </div>
     <div class="lg-board rv">
-      <div class="lg-cols"><span>NO</span><span><button type="button" class="lg-sort" data-key="co" aria-sort="none">고객사<span class="lg-arrow" aria-hidden="true"></span></button></span><span>프로젝트</span><span><button type="button" class="lg-sort" data-key="period" aria-sort="none">기간<span class="lg-arrow" aria-hidden="true"></span></button></span><span>역할</span><span>비고</span></div>
+      <div class="lg-cols"><span>NO</span><span><button type="button" class="lg-sort" data-key="co" aria-sort="none">고객사<span class="lg-arrow" aria-hidden="true">⇅</span></button></span><span>프로젝트</span><span><button type="button" class="lg-sort" data-key="period" aria-sort="none">기간<span class="lg-arrow" aria-hidden="true">⇅</span></button></span><span>역할</span><span>비고</span></div>
       <div class="lg-cap">설계 · PL 주도</div>
       <div class="lg-row">
         <span class="lg-no mono">01</span>
@@ -607,7 +607,7 @@
       var on=dir&&h.getAttribute('data-key')===key;
       h.setAttribute('aria-sort',on?(dir==='asc'?'ascending':'descending'):'none');
       var ar=h.querySelector('.lg-arrow');
-      if(ar)ar.textContent=on?(dir==='asc'?'▲':'▼'):'';
+      if(ar)ar.textContent=on?(dir==='asc'?'▲':'▼'):'⇅';
     });
   }
   heads.forEach(function(h){

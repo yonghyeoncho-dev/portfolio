@@ -306,9 +306,14 @@ section{padding-bottom:80px}
 .lg-chip.is-on:hover{color:#fff}
 /* 헤더 클릭 정렬 — 기간·고객사 두 열만. JS 없으면 텍스트처럼 보이는 버튼 */
 .lg-sort{background:none;border:0;padding:0;margin:0;font:inherit;letter-spacing:inherit;
-         color:inherit;cursor:pointer;display:inline-flex;align-items:center;gap:4px}
+         color:inherit;cursor:pointer;display:inline-flex;align-items:center}
 .lg-sort:hover{color:var(--accent)}
-.lg-arrow{font-size:9px;line-height:1}
+/* 기본은 흐린 ⇅ 상시 노출(정렬 가능 신호), 정렬 활성 시 accent ▲/▼ */
+.lg-arrow{display:inline-block;width:10px;margin-left:5px;font-size:10px;line-height:1;text-align:center;
+          opacity:.35;color:var(--faint);transition:opacity .15s ease,color .15s ease}
+.lg-sort:hover .lg-arrow{opacity:1}
+.lg-sort[aria-sort="ascending"] .lg-arrow,
+.lg-sort[aria-sort="descending"] .lg-arrow{opacity:1;color:var(--accent)}
 @media (max-width:820px){
   .sb{grid-template-columns:1fr;gap:12px}
   .sb-id{flex-direction:row;justify-content:flex-start;align-items:center}
