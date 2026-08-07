@@ -118,24 +118,8 @@ section{padding-bottom:80px}
 .shead p{color:var(--muted);font-size:17px;margin-top:14px;line-height:1.7;max-width:760px}
 
 /* ==========================================================================
-   1. 만든 사이트 — 스크린샷 + 링크 카드 3장
+   공유 유틸 — .chip (운영 도구 콘솔 스택 칩에서 사용)
    ========================================================================== */
-/* 가로 행 배치 — 아래 3열 그리드가 연달아 나오는 단조로움을 끊는다.
-   왼쪽에 이름, 오른쪽에 설명·링크 */
-.site-grid{display:flex;flex-direction:column;gap:14px}
-.site{display:grid;grid-template-columns:300px minmax(0,1fr);
-      background:var(--card);border:1px solid var(--line);border-radius:16px;
-      transition:border-color .2s ease,box-shadow .2s ease}
-.site:hover{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent)}
-.sh{display:flex;flex-direction:column;align-items:center;text-align:center;gap:10px;
-     padding:28px 26px;border-right:1px solid var(--line2);justify-content:center}
-.sh h3{font-size:22px;font-weight:800;letter-spacing:-.5px;line-height:1.25;word-break:break-all}
-.sb{display:flex;flex-direction:column;justify-content:center;padding:26px 28px}
-.badge{font-size:12px;font-weight:700;padding:4px 10px;border-radius:999px;
-       background:var(--accent-soft);color:var(--accent-dark);white-space:nowrap}
-.badge.live{background:#e1f5ee;color:#085041}
-.sb>p{font-size:14.5px;color:var(--muted);line-height:1.7}
-.glinks{display:flex;gap:7px;margin-top:16px;flex-wrap:wrap;align-items:center}
 .chip{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;font-weight:600;
       color:var(--accent);background:#fff;border:1px solid var(--line);border-radius:999px;
       padding:6px 13px;transition:border-color .18s ease,background .18s ease}
@@ -251,9 +235,6 @@ section{padding-bottom:80px}
   section{padding-bottom:50px}
   .shead{padding-top:50px;margin-bottom:28px}
   .shead h2{font-size:27px}
-  .site{grid-template-columns:1fr}
-  .sh{border-right:0;border-bottom:1px solid var(--line2);padding:22px 22px 18px;flex-direction:row;align-items:center;justify-content:flex-start;text-align:left;flex-wrap:wrap}
-  .sb{padding:20px 22px 22px}
   .logo-grid{gap:10px}
   .logo-cell{flex:0 0 calc((100% - 10px)/2)}
   .logo-cell{padding:16px 12px 14px}
@@ -289,11 +270,6 @@ section{padding-bottom:80px}
 .sb-link svg{width:14px;height:14px}
 .sb-chip{font-size:12.5px;padding:7px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--muted)}
 
-/* ---------- CLIENTS: LOGO WALL ---------- */
-.logo-wall{display:grid;grid-template-columns:repeat(6,1fr);gap:20px 30px;align-items:center;margin-bottom:28px}
-.logo-wall img{width:100%;height:44px;object-fit:contain;filter:grayscale(1);opacity:.72;transition:filter .15s,opacity .15s}
-.logo-wall img:hover{filter:none;opacity:1}
-
 /* ---------- PROJECT LEDGER ---------- */
 .lg-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .lg-stats{display:flex;gap:20px;padding-bottom:8px;font-size:12px;color:var(--muted);white-space:nowrap}
@@ -320,6 +296,8 @@ section{padding-bottom:80px}
 .lg-fold[open] .lg-hint{display:none}
 .lg-fold[open] .lg-hint.on{display:inline-flex}
 @media (max-width:820px){
+  .sb{grid-template-columns:1fr;gap:12px}
+  .sb-id{flex-direction:row;justify-content:flex-start;align-items:center}
   .lg-cols{display:none}
   .lg-board{padding:6px 18px 18px}
   .lg-row{grid-template-columns:1fr auto;grid-template-areas:"co role" "pj pj" "note note";row-gap:3px}
