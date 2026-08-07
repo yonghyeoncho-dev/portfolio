@@ -157,9 +157,10 @@ section{padding-bottom:80px}
    3. 이력 검증
    ========================================================================== */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}
-.stat{background:var(--paper);border-radius:12px;padding:20px 24px}
-.stat b{display:block;font-size:30px;font-weight:700;letter-spacing:-.02em}
-.stat span{font-size:13px;color:var(--muted)}
+.stat{display:flex;flex-direction:column;align-items:center;justify-content:center;
+      min-height:120px;text-align:center;background:var(--paper);border-radius:12px;padding:20px 24px}
+.stat b{display:block;font-size:30px;font-weight:700;letter-spacing:-.02em;line-height:1.1;margin-bottom:6px}
+.stat span{font-size:13px;color:var(--muted);white-space:nowrap}
 
 /* 로고 카드 5열 — 리스타일러 실측치 (소스 800x400 캔버스 전제)
    .lc-logo 96px / gap 16 / padding 20 14 18 — 임의로 줄이지 말 것 */
