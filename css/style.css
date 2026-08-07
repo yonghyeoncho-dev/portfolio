@@ -324,6 +324,8 @@ section{padding-bottom:80px}
   .sb{grid-template-columns:1fr;gap:12px}
   .sb-id{flex-direction:row;justify-content:flex-start;align-items:center}
   .lg-cols{display:none}
+  .lg-filter{margin-bottom:14px}
+  .lg-chip{font-size:12.5px;padding:0 13px;min-height:32px}
   .lg-board{padding:6px 18px 18px}
   .lg-row{grid-template-columns:1fr auto;grid-template-areas:"co role" "period period" "pj pj" "note note";row-gap:3px}
   .lg-no{display:none}
