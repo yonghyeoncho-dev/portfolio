@@ -268,7 +268,7 @@
         <span class="lg-role"><span class="role top">설계·PL</span></span>
         <span class="lg-note empty">—</span>
       </div>
-      <details class="lg-fold">
+      <details class="lg-fold" open>
       <summary class="lg-cap">디자인 · 퍼블리싱<span class="lg-hint">16건 펼치기</span><span class="lg-hint on">접기</span></summary>
       <div class="lg-row">
         <span class="lg-no mono">15</span>
@@ -553,11 +553,11 @@
       g1rows.forEach(function(r){r.style.display='none';});
       show(details,true);
       if(details)details.open=true;
-    }else{                      // 전체 — 원상 복귀, details는 다시 닫기
+    }else{                      // 전체 — 원상 복귀(기본이 펼침이므로 details도 펼침 유지)
       show(g1cap,true);
       g1rows.forEach(function(r){r.style.display='';});
       show(details,true);
-      if(details)details.open=false;
+      if(details)details.open=true;
     }
     chips.forEach(function(c){
       var on=c.getAttribute('data-filter')===mode;
