@@ -265,9 +265,9 @@ section{padding-bottom:80px}
 .sb-st.pl{background:var(--line2);color:var(--muted)}
 .sb-body p{font-size:14px;color:var(--muted);line-height:1.7;margin:0}
 .sb-foot{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;align-items:center}
-.sb-link{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:7px 15px;transition:background .15s}
+.sb-link{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:600;line-height:1;color:var(--accent);border:1px solid var(--accent);border-radius:999px;min-height:36px;padding:7px 15px;box-sizing:border-box;transition:background .15s}
 .sb-link:hover{background:var(--accent-soft)}
-.sb-link svg{width:14px;height:14px}
+.sb-link svg{width:14px;height:14px;display:block;flex-shrink:0}
 .sb-chip{font-size:12.5px;padding:7px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--muted)}
 
 /* ---------- PROJECT LEDGER ---------- */
