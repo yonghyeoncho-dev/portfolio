@@ -504,3 +504,16 @@ body{word-break:keep-all}
 @media (max-width:480px){
   .pills{display:grid;grid-template-columns:1fr 1fr;text-align:left}
 }
+
+/* ===== 대표 사례 머리 O: 숫자와 제목 세로 가운데 맞춤 ===== */
+.case-head{align-items:center;padding:46px 36px 34px}
+.case-no{position:relative;display:block;line-height:1}
+.case-no::before{position:absolute;left:2px;bottom:100%;margin-bottom:8px;white-space:nowrap}
+.case-head h3{line-height:1.2}
+@media (max-width:768px){
+  .case-head{padding:40px 20px 24px}
+  .case-no::before{margin-bottom:6px}
+}
+@media print{
+  .case-head{padding:34px 0 16px}
+}
