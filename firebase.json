@@ -13,7 +13,12 @@
       "**/logos_ready/**",
       "**/*.py",
       "**/*.log",
-      "tools/**"
+      "tools/**",
+      "README.md",
+      "CLAUDE.md",
+      "**/*.bak_*",
+      "assets/img/shot_*.png",
+      "assets/img/banner-*.jpg"
     ],
     "headers": [
       {
