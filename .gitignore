@@ -6,3 +6,5 @@ assets/img/trimmed/
 .vscode/
 CLAUDE.md
 *roadmap*.md
+firebase-debug.log
+*.log

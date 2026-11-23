@@ -18,7 +18,9 @@
       "CLAUDE.md",
       "**/*.bak_*",
       "assets/img/shot_*.png",
-      "assets/img/banner-*.jpg"
+      "assets/img/banner-*.jpg",
+      "firebase-debug.log",
+      "*.log"
     ],
     "headers": [
       {
