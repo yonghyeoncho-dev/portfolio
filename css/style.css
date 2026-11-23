@@ -517,3 +517,11 @@ body{word-break:keep-all}
 @media print{
   .case-head{padding:34px 0 16px}
 }
+
+/* ===== 메인 화면 P: 왼쪽 정렬 ===== */
+.hero{text-align:left}
+.hero::before{background:radial-gradient(1000px 380px at 82% 112%,rgba(134,175,249,.42),transparent 70%)}
+.hsub{max-width:760px;margin:22px 0 0;text-wrap:pretty}
+.hero h1{text-wrap:balance}
+.hero-btns{justify-content:flex-start}
+.pills{justify-content:flex-start}
