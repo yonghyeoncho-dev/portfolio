@@ -383,3 +383,23 @@ body{word-break:keep-all}
   .nav{position:static}
   .case,.op{break-inside:avoid}
 }
+
+/* ===== 대표 사례: 제목 강조 ===== */
+.case{border-top:4px solid var(--accent);margin-bottom:40px;padding-top:30px}
+.case:last-child{margin-bottom:0}
+.case-head{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:22px;
+  padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--line)}
+.case-no{display:flex;flex-direction:column;align-items:flex-start;
+  font-size:44px;font-weight:700;line-height:1;letter-spacing:-.02em;color:var(--accent)}
+.case-no::before{content:"CASE";font-size:11px;font-weight:700;letter-spacing:.14em;
+  color:var(--muted);margin-bottom:6px}
+.case-head h3{font-size:30px;font-weight:800;letter-spacing:-.025em;line-height:1.3}
+@media (max-width:768px){
+  .case{margin-bottom:28px;padding-top:24px}
+  .case-head{grid-template-columns:1fr;gap:10px;padding-bottom:18px;margin-bottom:18px}
+  .case-no{font-size:34px}
+  .case-head h3{font-size:22px}
+}
+@media (max-width:480px){
+  .pills{display:grid;grid-template-columns:1fr 1fr}
+}
