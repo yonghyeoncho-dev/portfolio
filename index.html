@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>조용현 · UI 아키텍트 · 프론트엔드 · PL</title>
-<meta name="description" content="7년차 UI 아키텍트. 22개 기업 30개 운영 시스템의 UI를 설계했고, maplelog.gg를 기획부터 배포·운영까지 혼자 맡고 있습니다.">
+<title>조용현 · 엔터프라이즈 UI/UX 설계 · UI 표준 · PL</title>
+<meta name="description" content="7년간 22개 고객사 30개 업무시스템의 화면을 설계하고, UI 표준과 디자인 가이드를 직접 써 온 UI/UX 설계자입니다. PL로 최대 4인 팀을 이끌었습니다.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" rel="stylesheet">
@@ -17,12 +17,12 @@
 <!-- ===== NAV ===== -->
 <header class="nav" id="nav">
   <div class="nav-in">
-    <div class="brand">조용현<small>UI 아키텍트 · 프론트엔드 · PL</small></div>
+    <div class="brand">조용현<small>UI/UX 설계 · UI 표준 · PL</small></div>
     <nav class="menu" id="menu">
       <a href="#ops">운영 도구</a>
-      <a href="#sites">혼자 만든 것</a>
       <a href="#projects">전체 이력</a>
       <a href="#verify">이력 검증</a>
+      <a href="#sites">직접 만든 것</a>
       <a href="#contact">연락처</a>
     </nav>
     <div class="nav-right">
@@ -35,9 +35,9 @@
 <section class="hero" id="home">
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-in">
-    <div class="eyebrow fu">조용현 · UI 아키텍트 · 프론트엔드</div>
-    <h1 class="fu">운영팀이 쓰는 도구를,<br><span class="hl">기획부터 배포까지</span></h1>
-    <p class="hsub fu">7년간 22개 기업의 운영 시스템 화면을 설계했고, 반복되는 것은 도구로 바꿔왔습니다.<br>지금은 실서비스 하나를 기획 · 개발 · 배포 · 운영까지 혼자 맡고 있습니다.</p>
+    <div class="eyebrow fu">조용현 · 엔터프라이즈 UI/UX 설계 · UI 표준 · PL</div>
+    <h1 class="fu">기업 업무시스템의 화면을,<br><span class="hl">설계하고 표준으로 만듭니다</span></h1>
+    <p class="hsub fu">7년간 22개 기업의 운영 시스템 화면을 설계했고, 반복되는 것은 도구로 바꿔왔습니다. 디자인 가이드와 UI 표준을 직접 쓰고, PL로 최대 4인 팀을 이끌었습니다.</p>
     <div class="pills fu">
       <div class="pill"><b class="mono">7년+</b><span>경력</span></div>
       <div class="pill"><b class="mono">30</b><span>프로젝트</span></div>
@@ -78,13 +78,12 @@
 
     <div class="consoles rv">
       <div class="ch">관리자 콘솔을 만들었습니다</div>
-      <div class="cl"><span class="cn">maplelog.gg</span><span class="cd">유저 · 권한 · 공지 · 데이터 백업 — 역할 기반 권한 모델 직접 설계</span></div>
       <div class="cl"><span class="cn">iezngo.com</span><span class="cd">문의 접수 · 블로그 게시 관리 콘솔 · 검색 색인 — JSP → 정적 전환과 함께 구축, 직접 배포 · 운영</span></div>
+      <div class="cl"><span class="cn">maplelog.gg</span><span class="cd">유저 · 권한 · 공지 · 데이터 백업 — 역할 기반 권한 모델 직접 설계</span></div>
     </div>
 
     <div class="opstack rv">
       <span class="chip st">Node.js · Cloud Functions</span>
-      <span class="chip st">TypeScript · React</span>
       <span class="chip st">Firestore · Security Rules</span>
       <span class="chip st">Python 파싱 파이프라인</span>
       <span class="chip st">Nexacro · 엔터프라이즈 UI</span>
@@ -93,51 +92,7 @@
   </div>
 </section>
 
-<!-- ===== 2. 혼자 만든 것 ===== -->
-<section class="sites" id="sites">
-  <div class="wrap">
-    <div class="shead rv">
-      <div class="kick">SOLO BUILT</div>
-      <h2>혼자 만들고, 혼자 운영합니다</h2>
-      <p>기획 · 화면 · 데이터 · 배포 · 운영까지 나눠 맡은 사람 없이 진행했습니다.
-         셋 다 지금 눌러보실 수 있습니다.</p>
-    </div>
-    <div class="sb-list">
-      <div class="sb rv">
-        <div class="sb-id"><b>maplelog.gg</b><span class="sb-st live">Live · 운영 중</span></div>
-        <div class="sb-body">
-          <p>기획 · DB · 프론트 · 배포 · 운영을 혼자 맡고 있는 실서비스입니다. 프레임워크 없이 SPA 라우팅과 상태를 직접 구현했고, 역할 기반 권한 모델과 관리자 콘솔까지 설계했습니다.</p>
-          <div class="sb-foot">
-            <a class="sb-link" href="https://maplelog.gg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14 21 3M21 3v7M21 3h-7M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>서비스 열기</a>
-            <span class="sb-chip">Vanilla JS SPA</span><span class="sb-chip">Firestore</span><span class="sb-chip">Cloud Functions</span>
-          </div>
-        </div>
-      </div>
-      <div class="sb rv">
-        <div class="sb-id"><b>maplelog-react</b><span class="sb-st wip">리빌드 진행 중</span></div>
-        <div class="sb-body">
-          <p>직접 만든 SPA의 라우팅 · 상태 · 렌더링을 React Router와 훅으로 옮기고 있습니다. 실제 아이템 2,662종 연동을 마쳤고, 검색 조건을 URL 쿼리로 올려 뒤로가기와 링크 공유가 동작합니다.</p>
-          <div class="sb-foot">
-            <a class="sb-link" href="https://github.com/yonghyeoncho-dev/maplelog-react" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14 21 3M21 3v7M21 3h-7M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>저장소 보기</a>
-            <span class="sb-chip">React</span><span class="sb-chip">TypeScript</span><span class="sb-chip">Vite</span>
-          </div>
-        </div>
-      </div>
-      <div class="sb rv">
-        <div class="sb-id"><b>iezngo.com</b><span class="sb-st pl">단독 구축 · 운영 중</span></div>
-        <div class="sb-body">
-          <p>회사 홈 · 제품소개 · 체험 페이지를 단일 도메인으로 통합했습니다. JSP를 정적 페이지로 전환하고, 문의 접수 · 블로그 게시 관리 콘솔과 검색 색인을 직접 만들었습니다. 배포와 운영도 직접 맡고 있습니다.</p>
-          <div class="sb-foot">
-            <a class="sb-link" href="https://iezngo.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14 21 3M21 3v7M21 3h-7M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>사이트 열기</a>
-            <span class="sb-chip">HTML/CSS/JS</span><span class="sb-chip">Firebase Hosting</span><span class="sb-chip">관리자 콘솔</span><span class="sb-chip">검색 색인</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 3. 전체 이력 (PROJECT LEDGER) ===== -->
+<!-- ===== 2. 전체 이력 (PROJECT LEDGER) ===== -->
 <section class="ledger" id="projects">
   <div class="wrap">
     <div class="shead rv lg-head">
@@ -403,7 +358,7 @@
   </div>
 </section>
 
-<!-- ===== 4. 이력 검증 ===== -->
+<!-- ===== 3. 이력 검증 ===== -->
 <section class="verify" id="verify">
   <div class="wrap">
     <div class="shead rv">
@@ -444,7 +399,41 @@
   </div>
 </section>
 
-<!-- ===== 4. 연락처 (푸터) ===== -->
+<!-- ===== 4. 혼자 만든 것 ===== -->
+<section class="sites" id="sites">
+  <div class="wrap">
+    <div class="shead rv">
+      <div class="kick">SOLO BUILT</div>
+      <h2>직접 만들고 운영하는 사이트</h2>
+      <p>기획 · 화면 · 데이터 · 배포 · 운영까지 나눠 맡은 사람 없이 진행했습니다.
+         둘 다 지금 눌러보실 수 있습니다.</p>
+    </div>
+    <div class="sb-list">
+      <div class="sb rv">
+        <div class="sb-id"><b>iezngo.com</b><span class="sb-st pl">단독 구축 · 운영 중</span></div>
+        <div class="sb-body">
+          <p>회사 홈 · 제품소개 · 체험 페이지를 단일 도메인으로 통합했습니다. JSP를 정적 페이지로 전환하고, 문의 접수 · 블로그 게시 관리 콘솔과 검색 색인을 직접 만들었습니다. 배포와 운영도 직접 맡고 있습니다.</p>
+          <div class="sb-foot">
+            <a class="sb-link" href="https://iezngo.com" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14 21 3M21 3v7M21 3h-7M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>사이트 열기</a>
+            <span class="sb-chip">HTML/CSS/JS</span><span class="sb-chip">Firebase Hosting</span><span class="sb-chip">관리자 콘솔</span><span class="sb-chip">검색 색인</span>
+          </div>
+        </div>
+      </div>
+      <div class="sb rv">
+        <div class="sb-id"><b>maplelog.gg</b><span class="sb-st live">개인 프로젝트 · 운영 중</span></div>
+        <div class="sb-body">
+          <p>기획 · DB · 프론트 · 배포 · 운영을 혼자 맡고 있는 실서비스입니다. 프레임워크 없이 SPA 라우팅과 상태를 직접 구현했고, 역할 기반 권한 모델과 관리자 콘솔까지 설계했습니다.</p>
+          <div class="sb-foot">
+            <a class="sb-link" href="https://maplelog.gg" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 14 21 3M21 3v7M21 3h-7M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>서비스 열기</a>
+            <span class="sb-chip">Vanilla JS SPA</span><span class="sb-chip">Firestore</span><span class="sb-chip">Cloud Functions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. 연락처 (푸터) ===== -->
 <footer class="footer-v2" id="contact">
   <div class="footer-social">
     <a href="https://github.com/yonghyeoncho-dev" aria-label="GitHub" target="_blank" rel="noopener">
@@ -458,7 +447,6 @@
     <div class="f-col">
       <div class="f-col-title">만든 것</div>
       <a href="https://maplelog.gg" target="_blank" rel="noopener">maplelog.gg</a>
-      <a href="https://github.com/yonghyeoncho-dev/maplelog-react" target="_blank" rel="noopener">maplelog-react 저장소</a>
       <a href="https://iezngo.com" target="_blank" rel="noopener">이젠고 통합 웹사이트</a>
     </div>
     <div class="f-col">
@@ -477,7 +465,7 @@
   <div class="footer-bottom">
     <div class="fb-row">
       <span class="fb-strong">조용현</span>
-      <span>UI 아키텍트 · 프론트엔드 · PL</span>
+      <span>UI/UX 설계 · UI 표준 · PL</span>
     </div>
     <div class="footer-info">2026 © Yonghyeon Cho. 이 사이트도 직접 설계 · 구축 · 배포했습니다.</div>
   </div>
