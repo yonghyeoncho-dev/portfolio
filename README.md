@@ -1,6 +1,6 @@
 # portfolio
 
-엔터프라이즈 UI/UX 설계 · UI 표준 담당 조용현의 개인 포트폴리오 사이트. 기획 · 디자인 · 퍼블리싱 · 배포를 단독 수행했습니다.
+기업 업무시스템 UI/UX 설계 · UI 표준 담당 조용현의 개인 포트폴리오 사이트. 기획 · 디자인 · 퍼블리싱 · 배포를 단독 수행했습니다.
 
 **Live** → [yonghyeoncho.web.app](https://yonghyeoncho.web.app)
 
