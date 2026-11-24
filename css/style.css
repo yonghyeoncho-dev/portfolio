@@ -530,3 +530,14 @@ body{word-break:keep-all}
 @media (min-width:1025px){
   .nav-in{padding:0 max(60px,calc((100% - 1280px)/2 + 60px))}
 }
+
+/* ===== 이력표 R: PL 주석 한 줄 (비고와 같은 13px 회색) ===== */
+.shead p.lg-pl{font-size:13px;margin-top:8px;line-height:1.5}
+
+/* ===== 이력표 R: 긴 역할 이름은 역할 칸(90px) 안에서 줄바꿈 ===== */
+.lg-role .role{display:inline-block;white-space:normal;line-height:14px}
+
+/* ===== 헤더 R: 1025–1100px 에서 메뉴가 로고에 닿지 않도록 간격만 줄임 ===== */
+@media (min-width:1025px) and (max-width:1100px){
+  .menu{gap:36px}
+}
