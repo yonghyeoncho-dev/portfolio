@@ -525,3 +525,8 @@ body{word-break:keep-all}
 .hero h1{text-wrap:balance}
 .hero-btns{justify-content:flex-start}
 .pills{justify-content:flex-start}
+
+/* ===== 헤더 Q: 로고를 본문 세로선에 맞춤 ===== */
+@media (min-width:1025px){
+  .nav-in{padding:0 max(60px,calc((100% - 1280px)/2 + 60px))}
+}
